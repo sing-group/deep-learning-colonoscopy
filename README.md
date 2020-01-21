@@ -72,7 +72,7 @@ CVC-ClinicDB | [Bernal et al. 2015](https://doi.org/10.1016/j.compmedimag.2015.0
 CVC-ColonDB | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 380 sequential WL images with polyps extracted from 15 videos. | Image | 574 × 500 | Polyp locations (binary mask) | [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404)
 CVC-PolypHD | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 56 WL images. | Image | 1920 × 1080 | Polyp locations (binary mask) | [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404)
 ETIS-Larib | [Silva et al. 2014](https://doi.org/10.1007/s11548-013-0926-3) <br/> https://polyp.grand-challenge.org/EtisLarib/ | 196 WL images with polyps extracted from 34 sequences with 44 different polyps. | Image | 1225 × 966 | Polyp locations (binary mask) | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059)
-Kvasir-SEG | [Pogorelov et al. 2017](https://doi.org/10.1145/3083187.3083212) <br/> https://datasets.simula.no/kvasir-seg/#ground-truth | 1 000 polyp images | Image | Various resolutions | Polyp locations (binary mask) | -
+Kvasir-SEG | [Pogorelov et al. 2017](https://doi.org/10.1145/3083187.3083212) <br/> https://datasets.simula.no/kvasir-seg | 1 000 polyp images | Image | Various resolutions | Polyp locations (binary mask) | -
 ASU-Mayo Clinic Colonoscopy Video | [Tajbakhsh et al. 2016](https://doi.org/10.1109/TMI.2015.2487997) <br/> https://polyp.grand-challenge.org/AsuMayo/ | 38 small SD and HD video sequences: 20 training videos annotated with ground truth and 18 testing videos without ground truth annotations. WL and NBI. | Video | N/A | Polyp locations (binary mask) | [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059)
 CVC-ClinicVideoDB | [Angermann et al. 2017](https://doi.org/10.1007/978-3-319-67543-5_3) | 18 SD videos. | Video | 768 × 576 | Polyp locations (binary mask) | [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434)
 Colonoscopic Dataset | [Mesejo et al. 2016](https://doi.org/10.1109/TMI.2016.2547947) <br/> http://www.depeca.uah.es/colonoscopy_dataset/ | 76 short videos (both NBI and WL). | Video | 768 × 576 | Polyp classification (Hyperplastic vs. adenoma vs. serrated) | [Zhang R. et al. 2017](https://doi.org/10.1109/JBHI.2016.2635662)
@@ -118,17 +118,17 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 
 ### Off-the-shelf Architectures
 
-Study | Task | Framework | TL | Layers fine-tuned | Layers replaced | Output layer | Other
+Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | Output layer
 --- | --- | --- | --- | --- | --- | --- | ---
-[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | Classification | - | ImageNet | N/A | Layers after last CNN layer | SVM | AlexNet, GoogLeNet, Fast CNN, Medium CNN, Slow CNN, VGG16, VGG19
-[Zhang R. et al. 2017](https://doi.org/10.1109/JBHI.2016.2635662) | Detection and classification | - | ImageNet and Places205 | N/A | Tested connecting classifier to each convolutional layer (5 convolutional layers) | SVM (Poly, Linear, RBF, and Tahn) | CaffeNet
-[Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Classification | - | ImageNet | N/A | Last layer | FCL | Inception v3
-[Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134) | Detection | - | N/A | N/A | N/A | N/A | C3D
-[Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | Localization | YOLOv1 | PASCAL VOC 2007 and 2012 | All | - | - | 
-[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | Localization | Faster R-CNN with post-learning schemes | COCO | All | - | RPN and detector layers  | Inception ResNet-v2
-[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | Localization | - | ImageNet <br/> Also without TL | All | Last layer | FCL | ResNet-50 <br/> VGG16 <br/> VGG19
-[Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3) | Localization | SegNet | N/A | N/A | N/A | N/A | VGG16
-[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | Localization | Mask R-CNN | COCO | All (incrementally) | Last layer | FCL | ResNet101
+[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | Classification | AlexNet, GoogLeNet, Fast CNN, Medium CNN, Slow CNN, VGG16, VGG19 | - | ImageNet | N/A | Layers after last CNN layer | SVM
+[Zhang R. et al. 2017](https://doi.org/10.1109/JBHI.2016.2635662) | Detection and classification | CaffeNet | - | ImageNet and Places205 | N/A | Tested connecting classifier to each convolutional layer (5 convolutional layers) | SVM (Poly, Linear, RBF, and Tahn)
+[Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Classification | Inception v3 | - | ImageNet | N/A | Last layer | FCL
+[Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134) | Detection | C3D | - | N/A | N/A | N/A | N/A
+[Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | Localization | - | YOLOv1 | PASCAL VOC 2007 and 2012 | All | - | -
+[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | Localization | Inception ResNet-v2 | Faster R-CNN with post-learning schemes | COCO | All | - | RPN and detector layers
+[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | Localization | ResNet-50, VGG16, VGG19 | - | ImageNet <br/> Also without TL | All | Last layer | FCL
+[Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3) | Localization | VGG16 | SegNet | N/A | N/A | N/A | N/A
+[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | Localization | ResNet101 | Mask R-CNN | COCO | All (incrementally) | Last layer | FCL
 
 ### Custom Architectures
 
