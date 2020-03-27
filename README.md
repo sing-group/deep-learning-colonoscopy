@@ -26,7 +26,7 @@ Table of Contents:
 
 ## Polyp Detection and Localization
 
-Study | Date | Endoscopy type | Imaging technology | Localization type | Multiple polyp | Real time 
+Study | Date | Endoscopy type | Imaging technology | Localization type | Multiple polyp | Real time
 --- | --- | --- | --- | --- | --- | ---
 [Tajbakhsh et al. 2014](https://doi.org/10.1007/978-3-319-10470-6_23), [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | Sept. 2014 / Apr. 2015 | Conventional | N/A | Bounding box | No | Yes
 [Zhu R. et al. 2015](https://doi.org/10.1109/CISP.2015.7407907) | Oct. 2015 | Conventional | N/A | Bounding box (16x16 patches) | Yes | No
@@ -236,7 +236,3 @@ Study | Classes | Sensitivity | Specificity | PPV | NPV | Others | Polyp-level v
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Neoplastic vs. hyperplastic | 96.3% [P] | 78.1% [P] | 89.6% [P] | 91.5% [P] | N/A | frame | image dataset
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Endoscopically curable lesions vs. endoscopically incurable lesions | 88.2% [P] | 77.9% [P] | 92.1% [P] | 69.3% [P] | Acc: 85.5% [P] | frame | image dataset
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | Hyperplastic vs. serrated adenoma (near focus)<br/>Hyperplastic vs. adenoma (far focus) | 57.14%(hyperplastic vs. serrated) [P] <br/>75.63% (hyperplastic vs. adenoma) [P] | 68.52% (hyperplastic vs. serrated) [P] <br/>63.79% (hyperplastic vs. adenoma) [P] | N/A | N/A | Acc: 67.21% (hyperplastic vs. serrated) [P] <br/>Acc: 72.48% (hyperplastic vs. adenoma) [P] | frame | image dataset
-
-
-## Polyp Classification
-
