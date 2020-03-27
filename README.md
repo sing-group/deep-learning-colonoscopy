@@ -40,8 +40,8 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 [Zheng Y. et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | July 2018 | Conventional | NBI, WL | Bounding box | Yes | Yes
 [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | July 2018 | Conventional | WL | Bounding box | Yes | No
 [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | Sep. 2018 | Conventional | NBI, WL | Bounding box | No | Yes
+[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [GitHub](https://github.com/ahme0307/Ynet)| Sep. 2018 | Conventional | WL | Binary mask | Yes | Yes
 [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Wang et al. 2018](http://dx.doi.org/10.1136/gutjnl-2018-317500) | Oct. 2018 | Conventional | N/A | Binary mask | Yes | Yes
-[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Github](https://github.com/ahme0307/Ynet)| Sep. 2018 | Conventional | WL | Binary mask | Yes | Yes
 [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) |  Apr. 2019 | Conventional | NBI, WL | Bounding box | Yes | No
 [Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) |  March 2019 | WCE | N/A | Bounding box | Yes | No
 [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) |  March 2019 | Conventional | N/A | Bounding box | Yes | Yes
@@ -74,7 +74,7 @@ CVC-ColonDB | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002)
 CVC-PolypHD | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 56 WL images. | Image | 1920 × 1080 | Polyp locations (binary mask) | [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404)
 ETIS-Larib | [Silva et al. 2014](https://doi.org/10.1007/s11548-013-0926-3) <br/> https://polyp.grand-challenge.org/EtisLarib/ | 196 WL images with polyps extracted from 34 sequences with 44 different polyps. | Image | 1225 × 966 | Polyp locations (binary mask) | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059)
 Kvasir-SEG | [Pogorelov et al. 2017](https://doi.org/10.1145/3083187.3083212) <br/> https://datasets.simula.no/kvasir-seg | 1 000 polyp images | Image | Various resolutions | Polyp locations (binary mask) | -
-ASU-Mayo Clinic Colonoscopy Video | [Tajbakhsh et al. 2016](https://doi.org/10.1109/TMI.2015.2487997) <br/> https://polyp.grand-challenge.org/AsuMayo/ | 38 small SD and HD video sequences: 20 training videos annotated with ground truth and 18 testing videos without ground truth annotations. WL and NBI. | Video | N/A | Polyp locations (binary mask) | [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059)
+ASU-Mayo Clinic Colonoscopy Video | [Tajbakhsh et al. 2016](https://doi.org/10.1109/TMI.2015.2487997) <br/> https://polyp.grand-challenge.org/AsuMayo/ | 38 small SD and HD video sequences: 20 training videos annotated with ground truth and 18 testing videos without ground truth annotations. WL and NBI. | Video | N/A | Polyp locations (binary mask) | [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)
 CVC-ClinicVideoDB | [Angermann et al. 2017](https://doi.org/10.1007/978-3-319-67543-5_3) | 18 SD videos. | Video | 768 × 576 | Polyp locations (binary mask) | [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434)
 Colonoscopic Dataset | [Mesejo et al. 2016](https://doi.org/10.1109/TMI.2016.2547947) <br/> http://www.depeca.uah.es/colonoscopy_dataset/ | 76 short videos (both NBI and WL). | Video | 768 × 576 | Polyp classification (Hyperplastic vs. adenoma vs. serrated) | [Zhang R. et al. 2017](https://doi.org/10.1109/JBHI.2016.2635662)
 
@@ -158,7 +158,7 @@ Study | Task | Based on | Highlights
 
 Rotation | Flipping | Shearing | Translation | Gaussian smoothing | Crop | Scale | Resize | Random brightness | Zooming | Saturation adjustment | Random contrast | Exposure adjustment | Histogram equalization
 --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-Num. Studies | 14 | 10 | 4 | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 1 | 1 | 1 | 1
+Num. Studies | 15 | 11 | 5 | 3 | 4 | 3 | 3 | 2 | 3 | 2 | 1 | 1 | 1 | 1
 [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  | X | X | X |  |  |  |  |  | 
 [Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  | 
 [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  | 
@@ -182,9 +182,9 @@ Num. Studies | 14 | 10 | 4 | 3 | 3 | 3 | 2 | 2 | 2 | 2 | 1 | 1 | 1 | 1
 Framework/Library | # Studies | Used by
 --- | --- | --- 
 Caffe | 5 | [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087), [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133)
-Tensorflow | 2 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402)
+Tensorflow | 3 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)
 C3D | 2 | [Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134)
-Keras | 3 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059)
+Keras | 4 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)
 MatConvNet (MATLAB) | 1 | [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725)
 
 # Performance
