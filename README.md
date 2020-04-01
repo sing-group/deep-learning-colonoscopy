@@ -1,6 +1,6 @@
 # Deep Learning for Polyp Detection and Classification in Colonoscopy
 
-This repository collects the most relevant studies applying Deep Learning for Polyp Detection and Classification in Colonoscopy from a technical point of view, focusing on the low-level details for the implementation of the DL models. In first place, each study is categorized in two types: (i) Polyp Detection and Localization and (ii) Polyp Classification. Secondly, a summary of the public datasets available as well as the private datasets used in the studies is provided. The third section focuses on technical aspects such as the Deep Learning architectures, the data augmentation techniques and the libraries and frameworks used. Finally, the fourth section summarizes the performance metrics reported by each study.
+This repository collects the most relevant studies applying Deep Learning for Polyp Detection and Classification in Colonoscopy from a technical point of view, focusing on the low-level details for the implementation of the DL models. In first place, each study is categorized in three types: (i) polyp detection and localization, (ii) polyp classification, and (iii) simultaneous polyp detection and classification. Secondly, a summary of the public datasets available as well as the private datasets used in the studies is provided. The third section focuses on technical aspects such as the Deep Learning architectures, the data augmentation techniques and the libraries and frameworks used. Finally, the fourth section summarizes the performance metrics reported by each study.
 
 Suggestions are welcome, please check the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
 
@@ -9,6 +9,7 @@ Table of Contents:
    * [Research](README.md#research)
       * [Polyp Detection and Localization](README.md#polyp-detection-and-localization)
       * [Polyp Classification](README.md#polyp-classification)
+      * [Simultaneous Polyp Detection and Classification](README.md#simultaneous-polyp-detection-and-classification)
    * [Datasets](README.md#datasets)
       * [Public Datasets](README.md#public-datasets)
       * [Private Datasets](README.md#private-datasets)
@@ -63,6 +64,12 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Feb. 2018 | Conventional | NBI | Neoplastic vs. hyperplastic | No
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Apr. 2019 | Conventional | NBI, WL | Endoscopically curable lesions vs. endoscopically incurable lesion | No
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | June 2019 | Conventional | N/A | Adenoma vs. hyperplastic vs. traditional serrated adenoma | No
+
+## Simultaneous Polyp Detection and Classification
+
+Study | Date | Endoscopy type | Imaging technology | Localization type | Multiple polyp | Classes | Real time
+--- | --- | --- | --- | --- | --- | --- | ---
+[Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Oct. 2019 | Conventional | WL | Bounding box | Yes | Polyp vs. adenoma | No
  
 # Datasets
  
@@ -114,6 +121,7 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | N/A | 1 800 <br/> With polyps: 530 <br/> Without polyps: 1 270  | 18 | N/A | Polyp localization | Wireless Capsule Endoscopy videos. <br/> Used as training set.
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | N/A | 2 484 | - | 2 513 | Polyp localization | -
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | 1 661 | 3 428 | - | N/A | Polyp localization | -
+[Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | 2 000 | 8 000 <br/> Polyp: 872 <br/> Adenoma: 1 210 | - | N/A | Polyp localization and classification (polyp vs. adenoma) | -
 
 # Deep Learning Models and Architectures
 
@@ -133,6 +141,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3) | Localization | VGG16 | SegNet | N/A | N/A | N/A | N/A
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | Localization | ResNet101 | Mask R-CNN | COCO | All (incrementally) | Last layer | FCL
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | Localization | SSD Inception v2 | Tensorflow | N/A | N/A | - | -
+[Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Localization and classification | Faster R-CNN with Inception Resnet v2 | Tensorflow | COCO | All | - | -
 
 ### Custom Architectures
 
@@ -186,7 +195,7 @@ Num. Studies | 16 | 11 | 5 | 3 | 4 | 4 | 3 | 2 | 4 | 2 | 1 | 1 | 1 | 1
 Framework/Library | # Studies | Used by
 --- | --- | --- 
 Caffe | 5 | [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087), [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133)
-Tensorflow | 4 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576)
+Tensorflow | 5 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576), [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649)
 Keras | 4 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)
 C3D | 2 | [Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134)
 MatConvNet (MATLAB) | 1 | [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725)
@@ -242,3 +251,14 @@ Study | Classes | Sensitivity | Specificity | PPV | NPV | Others | Polyp-level v
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Neoplastic vs. hyperplastic | 96.3% [P] | 78.1% [P] | 89.6% [P] | 91.5% [P] | N/A | frame | image dataset
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Endoscopically curable lesions vs. endoscopically incurable lesions | 88.2% [P] | 77.9% [P] | 92.1% [P] | 69.3% [P] | Acc: 85.5% [P] | frame | image dataset
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | Hyperplastic vs. serrated adenoma (near focus)<br/>Hyperplastic vs. adenoma (far focus) | 57.14%(hyperplastic vs. serrated) [P] <br/>75.63% (hyperplastic vs. adenoma) [P] | 68.52% (hyperplastic vs. serrated) [P] <br/>63.79% (hyperplastic vs. adenoma) [P] | N/A | N/A | Acc: 67.21% (hyperplastic vs. serrated) [P] <br/>Acc: 72.48% (hyperplastic vs. adenoma) [P] | frame | image dataset
+
+## Simultaneous Polyp Detection and Classification
+
+Performance metrics on public and private datasets of all simultaneous polyp detection and classification studies.
+
+- Between square brackets it is specified the dataset used, where “P” stands for private.
+- AP<sub>IoU</sub> stands for Average Precision and mAP<sub>IoU</sub> for Mean Average Precision (i.e. the mean of each class AP), calculated at the specified IoU (Intersection over Union) level.
+
+Study | Classes | AP | mAP | Manually selected images?
+--- | --- | --- | --- | ---
+[Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Polyp vs. adenoma | Polyp: AP<sub>0.5</sub> =  83.39% [P]<br/>  Adenoma: AP<sub>0.5</sub> =  97.90% [P] | mAP<sub>0.5</sub> = 90.645% [P] | Yes
