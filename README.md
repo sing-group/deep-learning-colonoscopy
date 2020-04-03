@@ -23,6 +23,7 @@ Table of Contents:
       * [Polyp Detection and Localization](README.md#polyp-detection-and-localization-1)
       * [Polyp Classification](README.md#polyp-classification-1)
       * [Simultaneous Polyp Detection and Classification](README.md#simultaneous-polyp-detection-and-classification-1)
+   * [List of Acronyms and Abbreviations](README.md#list-of-acronyms-and-abbreviations)
    * [References and Further Reading](README.md#references-and-further-reading)
 
 # Research
@@ -273,7 +274,16 @@ Study | Classes | AP | mAP | Manually selected images?
 --- | --- | --- | --- | ---
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Polyp vs. adenoma | Polyp: AP<sub>0.5</sub> =  83.39% [P]<br/>  Adenoma: AP<sub>0.5</sub> =  97.90% [P] | mAP<sub>0.5</sub> = 90.645% [P] | Yes
 
-## References and Further Reading
+# List of Acronyms and Abbreviations
+
+- AP: Average Precision.
+- BLI: Blue Light Imaging.
+- mAP: Mean Average Precision.
+- NBI: Narrow Band Imaging.
+- WCE: Wireless Capsule Endoscopy.
+- WL: White Light.
+
+# References and Further Reading
 
 - [Object Detection Metrics](https://github.com/rafaelpadilla/Object-Detection-Metrics).
 - [Evaluation metrics for object detection and segmentation: mAP](https://kharshit.github.io/blog/2019/09/20/evaluation-metrics-for-object-detection-and-segmentation).
