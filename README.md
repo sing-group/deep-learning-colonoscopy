@@ -66,6 +66,7 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Feb. 2018 | Conventional | NBI | Neoplastic vs. hyperplastic | No
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Apr. 2019 | Conventional | NBI, WL | Endoscopically curable lesions vs. endoscopically incurable lesion | No
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | June 2019 | Conventional | N/A | Adenoma vs. hyperplastic vs. traditional serrated adenoma | No
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Feb. 2020 | Conventional | NBI, BLI | *Modified Sano's (MS) classification*: MS I - Hyperplastic, MS II - Low-grade tubular adenomas, MS IIo - Nondysplastic or low-grade sessile serrated adenoma/polyp (SSA/P), MS IIIa - Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion, MS IIIb - Invasive colorectal cancers | Yes
 
 ## Simultaneous Polyp Detection and Classification
 
@@ -124,6 +125,9 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | N/A | 2 484 | - | 2 513 | Polyp localization | -
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | 1 661 | 3 428 | - | N/A | Polyp localization | -
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | 2 000 | 8 000 <br/> Polyp: 872 <br/> Adenoma: 1 210 | - | N/A | Polyp localization and classification (polyp vs. adenoma) | -
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 1 235 <br/> MS I: 103 <br/> MS II: 429 <br/> MS IIo: 293 <br/> MS IIIa: 295 <br/> MS IIIb: 115 | - | N/A | Polyp classification (5-class) | Australian (AU) dataset (NBI). <br/> Used as training set.
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 20 <br/> MS I: 3 <br/> MS II: 5 <br/> MS IIo: 2 <br/> MS IIIa: 7 <br/> MS IIIb: 3 | - | N/A | Polyp classification (5-class) | Japan (JP) dataset (NBI). <br/> Used as testing set.
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 49 <br/> MS I: 9 <br/> MS II: 10 <br/> MS IIo: 10 <br/> MS IIIa: 11 <br/> MS IIIb: 9 | - | N/A | Polyp classification (5-class) | Japan (JP) dataset (BLI). <br/> Used as testing set.
 
 # Deep Learning Models and Architectures
 
@@ -172,7 +176,7 @@ Study | Task | Based on | Highlights
 
 &nbsp; | Rotation | Flipping | Shearing | Translation | Gaussian smoothing | Crop | Scale | Resize | Random brightness | Zooming | Saturation adjustment | Random contrast | Exposure adjustment | Histogram equalization
 --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-Num. Studies | 16 | 11 | 5 | 3 | 4 | 4 | 3 | 2 | 4 | 2 | 1 | 1 | 1 | 1
+Num. Studies | 17 | 12 | 5 | 3 | 4 | 5 | 3 | 2 | 4 | 2 | 1 | 1 | 1 | 1
 [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  | X | X | X |  |  |  |  |  | 
 [Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  | 
 [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  | 
@@ -191,6 +195,7 @@ Num. Studies | 16 | 11 | 5 | 3 | 4 | 4 | 3 | 2 | 4 | 2 | 1 | 1 | 1 | 1
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  | X |  | X |  |  |  |  |  |  | X
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  | 
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  |  |  | X |  |  | X |  |  |  |  | 
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  |  | X |  |  | |  |  |  |  | 
 
 ## Frameworks and Libraries
 
@@ -253,6 +258,7 @@ Study | Classes | Sensitivity | Specificity | PPV | NPV | Others | Polyp-level v
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Neoplastic vs. hyperplastic | 96.3% [P] | 78.1% [P] | 89.6% [P] | 91.5% [P] | N/A | frame | image dataset
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Endoscopically curable lesions vs. endoscopically incurable lesions | 88.2% [P] | 77.9% [P] | 92.1% [P] | 69.3% [P] | Acc: 85.5% [P] | frame | image dataset
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | Hyperplastic vs. serrated adenoma (near focus)<br/>Hyperplastic vs. adenoma (far focus) | 57.14%(hyperplastic vs. serrated) [P] <br/>75.63% (hyperplastic vs. adenoma) [P] | 68.52% (hyperplastic vs. serrated) [P] <br/>63.79% (hyperplastic vs. adenoma) [P] | N/A | N/A | Acc: 67.21% (hyperplastic vs. serrated) [P] <br/>Acc: 72.48% (hyperplastic vs. adenoma) [P] | frame | image dataset
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Adenoma vs. hyperplastic | 97% [P: AU] <br/> 100% [P: JP-NBI] <br/> 100% [P: JP-BLI] | 51% [P: AU] <br/> 0% [P: JP-NBI] <br/> 0% [P: JP-BLI] | 95% [P: AU] <br/> 82.4% [P: JP-NBI] <br/> 77.5% [P: JP-BLI] | 63.5% [P: AU] <br/> - [P: JP-NBI] <br/> - [P: JP-BLI] | Acc: 82.7% [P: AU] <br/> ACc: 70% [P: JP-NBI] <br/> Acc: 63.2% [P: JP-BLI] | frame | image dataset
 
 ## Simultaneous Polyp Detection and Classification
 
