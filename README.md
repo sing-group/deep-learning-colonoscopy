@@ -286,3 +286,4 @@ Study | Classes | AP | mAP | Manually selected images?
 
 - [Object Detection Metrics](https://github.com/rafaelpadilla/Object-Detection-Metrics).
 - [Evaluation metrics for object detection and segmentation: mAP](https://kharshit.github.io/blog/2019/09/20/evaluation-metrics-for-object-detection-and-segmentation).
+- [A survey on Image Data Augmentation for Deep Learning](https://doi.org/10.1186/s40537-019-0197-0).
