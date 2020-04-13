@@ -67,6 +67,7 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Feb. 2018 | Conventional | NBI | Neoplastic vs. hyperplastic | No
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Apr. 2019 | Conventional | NBI, WL | Endoscopically curable lesions vs. endoscopically incurable lesion | No
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | June 2019 | Conventional | N/A | Adenoma vs. hyperplastic vs. traditional serrated adenoma | No
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Jan. 2020 | Conventional | WL | *Kudo's classification*: malignant (types I, II, III and IV) vs. non-malignant (type V) | No
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Feb. 2020 | Conventional | NBI, BLI | *Modified Sano's (MS) classification*: MS I - Hyperplastic, MS II - Low-grade tubular adenomas, MS IIo - Nondysplastic or low-grade sessile serrated adenoma/polyp (SSA/P), MS IIIa - Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion, MS IIIb - Invasive colorectal cancers | Yes
 
 ## Simultaneous Polyp Detection and Classification
@@ -126,6 +127,7 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | N/A | 2 484 | - | 2 513 | Polyp localization | -
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | 1 661 | 3 428 | - | N/A | Polyp localization | -
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | 2 000 | 8 000 <br/> Polyp: 872 <br/> Adenoma: 1 210 | - | N/A | Polyp localization and classification (polyp vs. adenoma) | -
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | 142 | 600 <br/> Type I: 47 <br/> Type II: 90 <br/> Type III: 183 <br/> Type IV: 187 <br/> Type V: 93 | - | N/A | Polyp classification (malignant vs. non-malignant) | -
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 1 235 <br/> MS I: 103 <br/> MS II: 429 <br/> MS IIo: 293 <br/> MS IIIa: 295 <br/> MS IIIb: 115 | - | N/A | Polyp classification (5 classes) | Australian (AU) dataset (NBI). <br/> Used as training set.
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 20 <br/> MS I: 3 <br/> MS II: 5 <br/> MS IIo: 2 <br/> MS IIIa: 7 <br/> MS IIIb: 3 | - | N/A | Polyp classification (5 classes) | Japan (JP) dataset (NBI). <br/> Used as testing set.
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 49 <br/> MS I: 9 <br/> MS II: 10 <br/> MS IIo: 10 <br/> MS IIIa: 11 <br/> MS IIIb: 9 | - | N/A | Polyp classification (5 classes) | Japan (JP) dataset (BLI). <br/> Used as testing set.
@@ -149,6 +151,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | Localization | ResNet101 | Mask R-CNN | COCO | All (incrementally) | Last layer | FCL
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | Localization | SSD Inception v2 | Tensorflow | N/A | N/A | - | -
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Localization and classification | Faster R-CNN with Inception Resnet v2 | Tensorflow | COCO | All | - | -
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Classification | VGG16 | Keras (Tensorflow) | ImageNet | None, Last three | Last layer | Dense with sigmoid activation
 
 ### Custom Architectures
 
@@ -172,12 +175,13 @@ Study | Task | Based on | Highlights
 [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | Localization | SSD | SSD was modified to add three new pooling layers (Second-Max Pooling, Second-Min Pooling and Min-Pooling) and a new deconvolution layer whose features are concatenated to those from the Max-Pooling layer that are fed into the detection layer.<br/> Model was pre-trained on the ILSVRC CLS-LOC dataset.
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | Classification | CapsNet | A convolutional layer followed by 7 convolutional capsule layers and finalized with a global average pool by capsule type.
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | Localization | Mask R-CNN | The region proposal network (RPN) uses a [Feature Pyramid Network](https://doi.org/10.1109/CVPR.2017.106) with a ResNet backbone. ResNet-50 and ResNet-101 were used, improved by extracting features from 5 different levels of layers. ResNet networks were initialized with COCO and ImageNet. Additionally, 76 random balloon images from Flickr were used to fine-tune networks initialized with COCO.<br/>The regions proposed by the RPN were filtered before the ROIAlign layer.<br/>The ROIAlign layer is followed by a pixel probability mask network, comprised of 4 convolutional layers followed by a transposed convolutional layer and a final convolutional layer with a sigmoid activation function that generates the final output. All convolutional layers except final are built with ReLU activation function.
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Classification | None | The model is composed by four convolutional layers, each one of them followed by a max pooling layer. After that, the model has a dropout layer to reduce overfitting and then add a final dense layer with sigmoid activation that outputs the probability of the current polyp being malignant. The model was trained using the RMSprop optimizer with a learning rate of 1×10<sup>−4</sup>.
 
 ## Data Augmentation Strategies
 
-&nbsp; | Rotation | Flipping | Shearing | Translation | Gaussian smoothing | Crop | Scale | Resize | Random brightness | Zooming | Saturation adjustment | Random contrast | Exposure adjustment | Histogram equalization
+&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Translation (Shifting) | Gaussian smoothing | Crop | Scale | Resize | Random brightness | Zooming | Saturation adjustment | Random contrast | Exposure adjustment | Histogram equalization
 --- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-Num. Studies | 17 | 12 | 5 | 3 | 4 | 5 | 3 | 2 | 4 | 2 | 1 | 1 | 1 | 1
+Num. Studies | 18 | 13 | 6 | 4 | 4 | 5 | 3 | 2 | 4 | 3 | 1 | 1 | 1 | 1
 [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  | X | X | X |  |  |  |  |  | 
 [Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  | 
 [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  | 
@@ -196,15 +200,16 @@ Num. Studies | 17 | 12 | 5 | 3 | 4 | 5 | 3 | 2 | 4 | 2 | 1 | 1 | 1 | 1
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  | X |  | X |  |  |  |  |  |  | X
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  | 
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  |  |  | X |  |  | X |  |  |  |  | 
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X | X |  | |  |  | | X |  |  |  | 
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  |  | X |  |  | |  |  |  |  | 
 
 ## Frameworks and Libraries
 
 Framework/Library | # Studies | Used by
 --- | --- | --- 
+Tensorflow | 6 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576), [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
+Keras | 5 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf),  [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
 Caffe | 5 | [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087), [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133)
-Tensorflow | 5 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576), [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649)
-Keras | 4 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)
 C3D | 2 | [Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134)
 MatConvNet (MATLAB) | 1 | [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725)
 
@@ -260,6 +265,7 @@ Study | Classes | Sensitivity | Specificity | PPV | NPV | Others | Polyp-level v
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Neoplastic vs. hyperplastic | 96.3% [P] | 78.1% [P] | 89.6% [P] | 91.5% [P] | N/A | frame | image dataset
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Endoscopically curable lesions vs. endoscopically incurable lesions | 88.2% [P] | 77.9% [P] | 92.1% [P] | 69.3% [P] | Acc: 85.5% [P] | frame | image dataset
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | Hyperplastic vs. serrated adenoma (near focus)<br/>Hyperplastic vs. adenoma (far focus) | 57.14% (hyperplastic vs. serrated) [P] <br/>75.63% (hyperplastic vs. adenoma) [P] | 68.52% (hyperplastic vs. serrated) [P] <br/>63.79% (hyperplastic vs. adenoma) [P] | N/A | N/A | Acc: 67.21% (hyperplastic vs. serrated) [P] <br/>Acc: 72.48% (hyperplastic vs. adenoma) [P] | frame | image dataset
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Malignant vs. non-malignant | 86% [P] | N/A | 81% [P] | N/A | Acc: 83% [P] <br/>F1: 0.83 [P] | frame | image dataset
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | 5-class (I, II, IIo, IIIa, IIIb)<br/><br/> Adenoma (classes II + IIo + IIIa) vs. hyperplastic (class I) | 97% (adenoma vs. hyperplastic) [P: AU] <br/> 100% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 100% (adenoma vs. hyperplastic) [P: JP-BLI] | 51% (adenoma vs. hyperplastic) [P: AU] <br/> 0% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 0% (adenoma vs. hyperplastic) [P: JP-BLI] | 95% (adenoma vs. hyperplastic) [P: AU] <br/> 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | 63.5% (adenoma vs. hyperplastic) [P: AU] <br/> - (adenoma vs. hyperplastic) [P: JP-NBI] <br/> - (adenoma vs. hyperplastic) [P: JP-BLI] | AUC (5-class): 94.3% [P: AU] <br/> AUC (5-class): 84.5% [P: JP-NBI] <br/>AUC (5-class): 90.3% [P: JP-BLI] <br/><br/>Acc: 72.3% (5-class) [P: AU] <br/> Acc: 59.8% (5-class) [P: JP-NBI] <br/> Acc: 53.1% (5-class) [P: JP-BLI] <br/><br/> Acc: 92.7% (adenoma vs. hyperplastic) [P: AU] <br/> Acc: 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> Acc: 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | frame | image dataset
 
 ## Simultaneous Polyp Detection and Classification
