@@ -182,30 +182,30 @@ Study | Task | Based on | Highlights
 
 ## Data Augmentation Strategies
 
-&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Translation (Shifting) | Gaussian smoothing | Crop | Scale | Resize | Random brightness | Zooming | Saturation adjustment | Random contrast | Exposure adjustment | Histogram equalization | Skew | Random erasing | Gaussian distortion
---- | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
-Num. Studies | 19 | 14 | 7 | 4 | 4 | 5 | 3 | 2 | 5 | 4 | 2 | 1 | 1 | 1 | 1 | 1 | 1
-[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  | X | X | X |  |  |  |  |  |  |  | 
-[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  | | |  |  | 
-[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  | 
-[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  | X |  |  |  |  |  |  |  |  |  | |  |  | 
-[Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) |  | X |  |  |  | X |  | X |  |  |  |  |  | |  |  | 
-[Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020) |  | X |  |  |  |  |  |  |  |  |  |  |  | |  |  | 
-[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  | X |  |  |  | X |  |  | X |  | |  |  | 
-[Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | X |  |  |  |  |  |  |  |  |  |  |  |  | |  |  | 
-[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  | X |  |  |  | X | X |  |  |  | |  |  | 
-[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | X | X | X |  |  |  |  |  |  |  |  |  |  | |  |  |  
-[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  | X |  | X |  | X |  |  |  |  | |  |  | 
-[Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) | X | X | X |  |  |  |  |  |  | X |  |  |  | | |  | 
-[Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) | X | X |  |  |  | X |  |  |  |  |  |  |  | |  |  | 
-[Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | X |  |  |  |  |  |  |  |  |  |  |  |  | |  |  | 
-[Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | X |  |  |  |  |  |  |  |  |  | X |  | X | |  |  | 
-[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  | X |  | X |  |  |  |  |  |  | X |  |  | 
-[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  | |  |  | 
-[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  |  |  | X |  |  | X |  |  |  |  | |  |  | 
-[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  |  |  |  |  | X | X | X |  |  |  | X | X | X
-[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X | X |  | |  |  | | X |  |  |  |  |  |  | 
-[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  |  | X |  |  | |  |  |  |  |  |  |  | 
+&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Crop | Random brightness | Zooming | Translation (Shifting) | Gaussian smoothing | Scale | Resize | Saturation adjustment | Random contrast | Exposure adjustment | Histogram equalization | Skew | Random erasing | Gaussian distortion |
+:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:|
+Num. Studies |19|14|7|5|5|4|4|4|3|2|2|1|1|1|1|1|1|
+[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  |  | X |  | X | X |  |  |  |  |  |  |  |
+[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  |  |  |  | X |  |  |  |  |  |  |  | |  |  | 
+[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |
+[Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) |  | X |  | X |  |  |  |  |  | X |  |  |  |  |  |  |  |
+[Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020) |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  | X |  |  | X |  |  |  | X |  |  |  |  |  |
+[Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  | X | X |  | X |  |  |  |  |  |  |  |  |  |
+[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | X | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  | X |  |  | X | X |  |  |  |  |  |  |  |  |
+[Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) | X | X | X |  |  | X |  |  |  |  |  |  |  |  | |  |  |
+[Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | X |  |  |  |  |  |  |  |  |  | X |  | X |  |  |  |  |
+[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  |  |  |  | X | X |  |  |  |  | X |  |  |  |
+[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |
+[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  | X | X |  |  |  |  | X |  |  |  | X | X | X |
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X |  | | X | X |  |  |  |  |  |  |  |  |  |  |
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |
 
 ## Frameworks and Libraries
 
