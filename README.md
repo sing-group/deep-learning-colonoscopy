@@ -1,6 +1,6 @@
 # Deep Learning for Polyp Detection and Classification in Colonoscopy
 
-This repository collects the most relevant studies applying Deep Learning for Polyp Detection and Classification in Colonoscopy from a technical point of view, focusing on the low-level details for the implementation of the DL models. In first place, each study is categorized in three types: (i) polyp detection and localization, (ii) polyp classification, and (iii) simultaneous polyp detection and classification. Secondly, a summary of the public datasets available as well as the private datasets used in the studies is provided. The third section focuses on technical aspects such as the Deep Learning architectures, the data augmentation techniques and the libraries and frameworks used. Finally, the fourth section summarizes the performance metrics reported by each study.
+This repository collects the most relevant studies applying Deep Learning for Polyp Detection and Classification in Colonoscopy from a technical point of view, focusing on the low-level details for the implementation of the DL models. In first place, each study is categorized in three types: (i) polyp detection and localization, (ii) polyp classification, and (iii) simultaneous polyp detection and classification (i.e. studies based on the usage of a single model such as YOLO or SSD to performs simultaneous polyp detection and classification). Secondly, a summary of the public datasets available as well as the private datasets used in the studies is provided. The third section focuses on technical aspects such as the Deep Learning architectures, the data augmentation techniques and the libraries and frameworks used. Finally, the fourth section summarizes the performance metrics reported by each study.
 
 Suggestions are welcome, please check the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
 
@@ -76,6 +76,9 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 Study | Date | Endoscopy type | Imaging technology | Localization type | Multiple polyp | Classes | Real time
 --- | --- | --- | --- | --- | --- | --- | ---
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Oct. 2019 | Conventional | WL | Bounding box | Yes | Polyp vs. adenoma | No
+[Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659)<sup>1</sup> | Feb. 2020 | Conventional | NBI, WL | Bounding box | Yes | Adenoma vs. hyperplastic vs. sesile serrated adenoma/polyp (SSAP) vs. cancer vs. other types (Peutz-Jeghers, juvenile, or inflammation polyps) | Yes
+
+1. Ozawa. et al. 2020 work is based on the usage of a single model (Single Show MultiBox Detector, SSD) that performs simultaneous polyp detection and classification. Nevertheless, since the detection and classification results are reported independently, they are included in the sections [Polyp Detection and Localization](README.md#polyp-detection-and-localization-1) and [Polyp Classification](README.md#polyp-classification-1), respectively.
  
 # Datasets
  
@@ -133,6 +136,8 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 1 235 <br/> MS I: 103 <br/> MS II: 429 <br/> MS IIo: 293 <br/> MS IIIa: 295 <br/> MS IIIb: 115 | - | N/A | Polyp classification (5 classes) | Australian (AU) dataset (NBI). <br/> Used as training set.
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 20 <br/> MS I: 3 <br/> MS II: 5 <br/> MS IIo: 2 <br/> MS IIIa: 7 <br/> MS IIIb: 3 | - | N/A | Polyp classification (5 classes) | Japan (JP) dataset (NBI). <br/> Used as testing set.
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 49 <br/> MS I: 9 <br/> MS II: 10 <br/> MS IIo: 10 <br/> MS IIIa: 11 <br/> MS IIIb: 9 | - | N/A | Polyp classification (5 classes) | Japan (JP) dataset (BLI). <br/> Used as testing set.
+[Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | 3 417 (3 021 with polyps and 396 without polyps) | 20 431 <br/><br/> WL: 17 566 <br/> - Adenoma: 9 310 <br/> - Hyperplastic: 2 002 <br/> - SSAP: 116 <br/> - Cancer: 1 468 <br/> - Other types: 657 <br/> - Normal mucosa: 4 013 <br/><br/> NBI: 2 865 <br/> - Adenoma: 2 085 <br/> - Hyperplastic: 519 <br/> - SSAP: 23 <br/> - Cancer: 131 <br/> - Other types: 107 <br/> - Normal mucosa: 0 | - | 4 752 <br/> Adenoma: 3 513 <br/> Hyperplastic: 1 058 <br/> SSAP: 22 <br/> Cancer: 68 <br/> Other types: 91 | Polyp localization and classification (Adenoma vs. hyperplastic vs. SSAP vs. cancer vs. other types) | Used as training set.
+[Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | 174 | 7 077 <br/><br/> WL: 6 748 <br/> - Adenoma: 639 <br/> - Hyperplastic: 145 <br/> - SSAP: 33 <br/> - Cancer: 30 <br/> - Other types: 27 <br/> - Normal mucosa: 5 874 <br/><br/> NBI: 329 <br/> - Adenoma: 208 <br/> - Hyperplastic: 69 <br/> - SSAP: 8 <br/> - Cancer: 3 <br/> - Other types: 10 <br/> - Normal mucosa: 31 | - | 309 <br/> Adenoma: 218 <br/> Hyperplastic: 63 <br/> SSAP: 7 <br/> Cancer: 4 <br/> Other types: 17 | Polyp localization and classification (Adenoma vs. hyperplastic vs. SSAP vs. cancer vs. other types) | Used as testing set.
 
 # Deep Learning Models and Architectures
 
@@ -155,6 +160,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Localization and classification | Faster R-CNN with Inception Resnet v2 | Tensorflow | COCO | All | - | -
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Classification | ResNet-50, ResNet-101, Xception, VGG19, Inception v3 | Keras (Tensorflow) | Yes | N/A | Last layer | N/A
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Classification | VGG16 | Keras (Tensorflow) | ImageNet | None, Last three | Last layer | Dense with sigmoid activation
+[Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | Localization and Classification | SSD (Single Shot MultiBox Detector) | Caffe | N/A | All | - | -
 
 ### Custom Architectures
 
@@ -213,7 +219,7 @@ Framework/Library | # Studies | Used by
 --- | --- | --- 
 Tensorflow | 7 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576), [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649), [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
 Keras | 6 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
-Caffe | 5 | [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087), [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133)
+Caffe | 6 | [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087), [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133), [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659)
 C3D | 2 | [Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134)
 MatConvNet (MATLAB) | 1 | [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725)
 
@@ -253,8 +259,9 @@ Study | Recall (sensitivity) | Precision (PPV) | Specificity | Others | Manually
 [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | 88.5% (f) [P] | N/A | 96.4% (f) [P] | - | No
 [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135) | 91.6% (f) [ETIS-Larib]<br/>84.5% (f) [P] | 75.3% (f) [ETIS-Larib] | 92.5% (f) [P] | F1: 0.83, F2: 0.88 (f) [ETIS-Larib] | Yes (ETIS-Larib)<br/>No (private)
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | 91.64% (f) [CVC-ColonDB]<br/>78.12% (f) [CVC-PolypHD]<br/>80.29% (f) [ETIS-Larib]<br/>95.52% (f) [P] | 89.94% (f) [CVC-ColonDB]<br/>83.33% (f) [CVC-PolypHD]<br/>72.93% (f) [ETIS-Larib]<br/>98.46% (f) [P] | N/A | F1: 0.9073, F2: 0.9127 (f) [CVC-ColonDB]<br/>F1: 0.8065, F2: 0.7911 (f) [CVC-PolypHD]<br/>F1: 0.7643, F2: 0.7870 (f) [ETIS-Larib]<br/>F1: 0.9667%, F2: 0.9610 (f) [P] | Yes (CVC-ClinicDB, ColonDB, ETIS-Larib)<br/>No (WCE video)
-[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | 86% (f) [CVC-ClinicDB]<br/>83% (f) [ETIS-Larib]<br/>93% (f) [P] | 80% (f) [CVC-ClinicDB]<br/>74% (f) [ETIS-Larib]<br/>86% (f) [P] | N/A | F1: 0.82, F2: 0.85 (f) [CVC-ClinicDB]<br/>F1: 0.79, F2: 0.81 (f) [ETIS-Larib]<br/>F1: 0.89, F2: 0.92 (f) [P]  | Yes
-[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) |  93.67% (f) [P] | N/A | 98.36% (f) [P]  | Accuracy: 96.04%, AP: 94.92% (f) [P] | Yes
+[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | 86% (f) [CVC-ClinicDB]<br/>83% (f) [ETIS-Larib]<br/>93% (f) [P] | 80% (f) [CVC-ClinicDB]<br/>74% (f) [ETIS-Larib]<br/>86% (f) [P] | N/A | F1: 0.82, F2: 0.85 (f) [CVC-ClinicDB]<br/>F1: 0.79, F2: 0.81 (f) [ETIS-Larib]<br/>F1: 0.89, F2: 0.92 (f) [P] | Yes
+[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | 93.67% (f) [P] | N/A | 98.36% (f) [P] | Accuracy: 96.04%, AP: 94.92% (f) [P] | Yes
+[Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | 92% (f) [P] <br/> 90% (f) [P: WL] <br/> 97% (f) [P: NBI] <br/> 98% (p) [P] | 86% (f) [P] <br/> 83% (f) [P: WL] <br/> 97% (f) [P: NBI] | N/A | F1: 0.88, F2: 0.88 (f) [P] <br/> F1: 0.86, F2: 0.84 (f) [P: WL] <br/> F1: 0.97, F2: 0.97 (f) [P: NBI]| Yes
 
 ## Polyp Classification
 
@@ -262,7 +269,7 @@ Performance metrics on public and private datasets of all polyp classification s
 
 - Between square brackets it is specified the dataset used, where “P” stands for private. 
 
-Study | Classes | Sensitivity | Specificity | PPV | NPV | Others | Polyp-level vs. frame-level | Dataset type
+Study | Classes | Recall (sensitivity) | Specificity | PPV | NPV | Others | Polyp-level vs. frame-level | Dataset type
 --- | --- | --- | --- | --- | --- | --- | --- | ---
 [Zhang R. et al. 2017](https://doi.org/10.1109/JBHI.2016.2635662) | Adenoma vs. hyperplastic<br/>Resectable vs. non-resectable<br/>Adenoma vs. hyperplastic vs. serrated | 92% (resectable vs. non-resectable) [ColonoscopicDataset]<br/>87.6% (adenoma vs. hyperplastic) [P] | 89.9% (resectable vs. non-resectable) [ColonoscopicDataset]<br/>84.2% (adenoma vs. hyperplastic) [P] | 95.4% (resectable vs. non-resectable) [ColonoscopicDataset]<br/>87.30% (adenoma vs. hyperplastic) [P] | 84.9% (resectable vs. non-resectable) [ColonoscopicDataset]<br/>87.2% (adenoma vs. hyperplastic) [P] | Acc: 91.3% (resectable vs. non- resectable) [ColonoscopicDataset]<br/>Acc: 86.7% (adenoma vs. serrated adenoma vs. hyperplastic) [ColonoscopicDataset]<br/>Acc: 85.9% (adenoma vs. hyperplastic) [P] | frame | video (manually selected images)
 [Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) | Adenoma vs. hyperplastic | 98% [P] | 83% [P] | 90% [P] | 97% [P] | - | polyp | unaltered video
@@ -272,6 +279,7 @@ Study | Classes | Sensitivity | Specificity | PPV | NPV | Others | Polyp-level v
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Not dangerous vs. dangerous vs. cancer | 88% (Cancer vs. others) [P] <br/> 84% (Not dangerous vs. others) [P] <br/> 90% (Dangerous vs. others) [P] | 94% (Cancer vs. others) [P] <br/> 93% (Not dangerous vs. others) [P] <br/> 93% (Dangerous vs. others) | 88% (Cancer vs. others) [P] <br/> 87% (Not dangerous vs. others) [P] <br/> 86% (Dangerous vs. others) | N/A | Acc: 87.1% [P] <br/> F1: 0.88 (Cancer vs. others) [P] <br/> F1: 0.86 (Not dangerous vs. others) [P] <br/> F1: 0.88 (Dangerous vs. others) | frame | image dataset
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Malignant vs. non-malignant | 86% [P] | N/A | 81% [P] | N/A | Acc: 83% [P] <br/>F1: 0.83 [P] | frame | image dataset
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | 5-class (I, II, IIo, IIIa, IIIb)<br/><br/> Adenoma (classes II + IIo + IIIa) vs. hyperplastic (class I) | 97% (adenoma vs. hyperplastic) [P: AU] <br/> 100% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 100% (adenoma vs. hyperplastic) [P: JP-BLI] | 51% (adenoma vs. hyperplastic) [P: AU] <br/> 0% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 0% (adenoma vs. hyperplastic) [P: JP-BLI] | 95% (adenoma vs. hyperplastic) [P: AU] <br/> 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | 63.5% (adenoma vs. hyperplastic) [P: AU] <br/> - (adenoma vs. hyperplastic) [P: JP-NBI] <br/> - (adenoma vs. hyperplastic) [P: JP-BLI] | AUC (5-class): 94.3% [P: AU] <br/> AUC (5-class): 84.5% [P: JP-NBI] <br/>AUC (5-class): 90.3% [P: JP-BLI] <br/><br/>Acc: 72.3% (5-class) [P: AU] <br/> Acc: 59.8% (5-class) [P: JP-NBI] <br/> Acc: 53.1% (5-class) [P: JP-BLI] <br/><br/> Acc: 92.7% (adenoma vs. hyperplastic) [P: AU] <br/> Acc: 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> Acc: 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | frame | image dataset
+[Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | Adenoma vs. hyperplastic vs. SSAP vs. cancer vs. other types | 97% (adenoma vs. other classes) [P: WL] <br/> 90% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 97% (adenoma vs. other classes) [P: NBI] <br/> 86% (adenoma vs. hyperplastic) [P: NBI] | <br/> 81% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 88% (adenoma vs. hyperplastic) [P: NBI] | 86% (adenoma vs. other classes) [P: WL] <br/> 98% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 83% (adenoma vs. other classes) [P: NBI] <br/> 98% (adenoma vs. hyperplastic) [P: NBI] | 85% (adenoma vs. other classes) [P: WL] <br/> 48% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 91% (adenoma vs. other classes) [P: NBI] <br/> 54% (adenoma vs. hyperplastic) [P: NBI] | Acc: 83% (5-class) [P: WL] <br/> F1: 0.91, F1: 0.88 (adenoma vs. other classes) [P: WL] <br/> F1: 0.94, F2: 0.96 (adenoma vs. hyperplastic) [P: WL] <br/><br/>  Acc: 81% (5-class) [P: NBI] <br/> F1: 0.89, F2: 0.85 (adenoma vs. other classes) [P NBI] <br/> F1: 0.92, F2: 0.95 (adenoma vs. hyperplastic) [P: NBI] | frame | image dataset
 
 ## Simultaneous Polyp Detection and Classification
 
@@ -290,6 +298,7 @@ Study | Classes | AP | mAP | Manually selected images?
 - BLI: Blue Light Imaging.
 - mAP: Mean Average Precision.
 - NBI: Narrow Band Imaging.
+- SSAP: Sesile Serrated Adenoma/Polyp.
 - WCE: Wireless Capsule Endoscopy.
 - WL: White Light.
 
