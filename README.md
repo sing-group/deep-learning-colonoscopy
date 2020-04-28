@@ -25,6 +25,7 @@ Table of Contents:
       * [Simultaneous Polyp Detection and Classification](README.md#simultaneous-polyp-detection-and-classification-1)
    * [List of Acronyms and Abbreviations](README.md#list-of-acronyms-and-abbreviations)
    * [References and Further Reading](README.md#references-and-further-reading)
+      * [Reviews](README.md#reviews)
 
 # Research
 
@@ -307,3 +308,11 @@ Study | Classes | AP | mAP | Manually selected images?
 - [Object Detection Metrics](https://github.com/rafaelpadilla/Object-Detection-Metrics).
 - [Evaluation metrics for object detection and segmentation: mAP](https://kharshit.github.io/blog/2019/09/20/evaluation-metrics-for-object-detection-and-segmentation).
 - [A survey on Image Data Augmentation for Deep Learning](https://doi.org/10.1186/s40537-019-0197-0).
+
+## Reviews
+
+- Jun Ki Min, Min Seob Kwak, and Jae Myung Cha. [Overview of Deep Learning in Gastrointestinal Endoscopy](https://dx.doi.org/10.5009%2Fgnl18384). Gut Liver. 2019 Jul; 13(4): 388–393.
+- Samy A Azer. [Challenges Facing the Detection of Colonic Polyps: What Can Deep Learning Do?](https://dx.doi.org/10.3390%2Fmedicina55080473). Medicina (Kaunas). 2019 Aug; 55(8): 473. 
+- Wei-Lun Chao, Hanisha Manickavasagan, and Somashekar G. Krishna. [Application of Artificial Intelligence in the Detection and Differentiation of Colon Polyps: A Technical Review for Physicians](https://dx.doi.org/10.3390%2Fdiagnostics9030099). Diagnostics (Basel). 2019 Sep; 9(3): 99.
+- Thomas KL. Lui, Chuan-Guo Guo, and Wai K. Leung. [Accuracy of Artificial Intelligence on Histology Prediction and Detection of Colorectal Polyps: a Systematic Review and Meta-Analysis](https://doi.org/10.1016/j.gie.2020.02.033). Gastrointest Endosc. 2020 Feb 28.
+- Cristina Sánchez-Montes, Jorge Bernal, Ana García-Rodríguez, Henry Córdova, and Gloria Fernández-Esparrach. [Review of computational methods for the detection and classification of polyps in colonoscopy imaging](https://doi.org/10.1016/j.gastre.2019.11.003). Gastroenterol Hepatol. 2020 Apr; 43(4): 222-232.
