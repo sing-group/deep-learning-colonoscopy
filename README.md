@@ -57,6 +57,7 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | Sept. 2019 | Conventional | WL | Binary mask | Yes | No
 [Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | Sept. 2019 | WCE | N/A | No | No | No
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | Oct. 2019 | Conventional | N/A | Bounding box | Yes | No
+[Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015) | Dec. 2019 | Conventional | N/A | Binary mask | No | No
 
 ## Polyp Classification
 
@@ -90,10 +91,10 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 
 Dataset | References | Description | Format | Resolution (w x h) | Ground truth | Used in
 --- | --- | --- | --- | --- | --- | ---
-CVC-ClinicDB | [Bernal et al. 2015](https://doi.org/10.1016/j.compmedimag.2015.02.007) <br/> https://polyp.grand-challenge.org/CVCClinicDB/ | 612 sequential WL images with polyps extracted from 31 sequences with 31 different polyps. | Image | 388 × 284 | Polyp locations (binary mask)  | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059)
-CVC-ColonDB | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 380 sequential WL images with polyps extracted from 15 videos. | Image | 574 × 500 | Polyp locations (binary mask) | [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404)
+CVC-ClinicDB | [Bernal et al. 2015](https://doi.org/10.1016/j.compmedimag.2015.02.007) <br/> https://polyp.grand-challenge.org/CVCClinicDB/ | 612 sequential WL images with polyps extracted from 31 sequences with 31 different polyps. | Image | 388 × 284 | Polyp locations (binary mask)  | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015)
+CVC-ColonDB | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 380 sequential WL images with polyps extracted from 15 videos. | Image | 574 × 500 | Polyp locations (binary mask) | [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015)
 CVC-PolypHD | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 56 WL images. | Image | 1920 × 1080 | Polyp locations (binary mask) | [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404)
-ETIS-Larib | [Silva et al. 2014](https://doi.org/10.1007/s11548-013-0926-3) <br/> https://polyp.grand-challenge.org/EtisLarib/ | 196 WL images with polyps extracted from 34 sequences with 44 different polyps. | Image | 1225 × 966 | Polyp locations (binary mask) | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Tian X. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059)
+ETIS-Larib | [Silva et al. 2014](https://doi.org/10.1007/s11548-013-0926-3) <br/> https://polyp.grand-challenge.org/EtisLarib/ | 196 WL images with polyps extracted from 34 sequences with 44 different polyps. | Image | 1225 × 966 | Polyp locations (binary mask) | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Tian X. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015)
 Kvasir-SEG | [Pogorelov et al. 2017](https://doi.org/10.1145/3083187.3083212) <br/> https://datasets.simula.no/kvasir-seg | 1 000 polyp images | Image | Various resolutions | Polyp locations (binary mask) | -
 ASU-Mayo Clinic Colonoscopy Video | [Tajbakhsh et al. 2016](https://doi.org/10.1109/TMI.2015.2487997) <br/> https://polyp.grand-challenge.org/AsuMayo/ | 38 small SD and HD video sequences: 20 training videos annotated with ground truth and 18 testing videos without ground truth annotations. WL and NBI. | Video | N/A | Polyp locations (binary mask) | [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026), [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)
 CVC-ClinicVideoDB | [Angermann et al. 2017](https://doi.org/10.1007/978-3-319-67543-5_3) | 18 SD videos. | Video | 768 × 576 | Polyp locations (binary mask) | [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434)
@@ -192,6 +193,7 @@ Study | Task | Based on | Highlights
 [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | Localization | SSD | SSD was modified to add three new pooling layers (Second-Max Pooling, Second-Min Pooling and Min-Pooling) and a new deconvolution layer whose features are concatenated to those from the Max-Pooling layer that are fed into the detection layer.<br/> Model was pre-trained on the ILSVRC CLS-LOC dataset.
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | Classification | CapsNet | A convolutional layer followed by 7 convolutional capsule layers and finalized with a global average pool by capsule type.
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | Localization | Mask R-CNN | The region proposal network (RPN) uses a [Feature Pyramid Network](https://doi.org/10.1109/CVPR.2017.106) with a ResNet backbone. ResNet-50 and ResNet-101 were used, improved by extracting features from 5 different levels of layers. ResNet networks were initialized with COCO and ImageNet. Additionally, 76 random balloon images from Flickr were used to fine-tune networks initialized with COCO.<br/>The regions proposed by the RPN were filtered before the ROIAlign layer.<br/>The ROIAlign layer is followed by a pixel probability mask network, comprised of 4 convolutional layers followed by a transposed convolutional layer and a final convolutional layer with a sigmoid activation function that generates the final output. All convolutional layers except final are built with ReLU activation function.
+[Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015) | Localization | U-Net | The U-Net architecture was modified to use as input any image or video formats associated with optical colonoscopy modalities.
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Classification | None | The model is composed by four convolutional layers, each one of them followed by a max pooling layer. After that, the model has a dropout layer to reduce overfitting and then add a final dense layer with sigmoid activation that outputs the probability of the current polyp being malignant. The model was trained using the RMSprop optimizer with a learning rate of 1×10<sup>−4</sup>.
 
 ## Data Augmentation Strategies
@@ -241,8 +243,8 @@ MatConvNet (MATLAB) | 1 | [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6
 
 Performance metrics on public and private datasets of all polyp detection and localization studies. 
 
-- Between parentheses it is specified the type of performance metric: f = frame-based, p = polyp-based, and pa = patch.
-- Between square brackets it is specified the dataset used, where “P” stands for private.
+- Between parentheses it is specified the type of performance metric: f = frame-based, p = polyp-based, pa = patch, and pi = pixel-based.
+- Between square brackets it is specified the dataset used, where "P" stands for private.
 - Performances marked with an * are reported on training datasets.
 - AP stands for Average Precision.
 
@@ -269,17 +271,18 @@ Study | Recall (sensitivity) | Precision (PPV) | Specificity | Others | Manually
 [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134) | 86% (p) [P] | N/A | 74% (f) [P] | - | No
 [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | 88.5% (f) [P] | N/A | 96.4% (f) [P] | - | No
 [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135) | 91.6% (f) [ETIS-Larib]<br/>84.5% (f) [P] | 75.3% (f) [ETIS-Larib] | 92.5% (f) [P] | F1: 0.83, F2: 0.88 (f) [ETIS-Larib] | Yes (ETIS-Larib)<br/>No (private)
-[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | 91.64% (f) [CVC-ColonDB]<br/>78.12% (f) [CVC-PolypHD]<br/>80.29% (f) [ETIS-Larib]<br/>95.52% (f) [P] | 89.94% (f) [CVC-ColonDB]<br/>83.33% (f) [CVC-PolypHD]<br/>72.93% (f) [ETIS-Larib]<br/>98.46% (f) [P] | N/A | F1: 0.9073, F2: 0.9127 (f) [CVC-ColonDB]<br/>F1: 0.8065, F2: 0.7911 (f) [CVC-PolypHD]<br/>F1: 0.7643, F2: 0.7870 (f) [ETIS-Larib]<br/>F1: 0.966, F2: 0.961 (f) [P] | Yes (CVC-ClinicDB, ColonDB, ETIS-Larib)<br/>No (WCE video)
+[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | 91.64% (f) [CVC-ColonDB]<br/>78.12% (f) [CVC-PolypHD]<br/>80.29% (f) [ETIS-Larib]<br/>95.52% (f) [P] | 89.94% (f) [CVC-ColonDB]<br/>83.33% (f) [CVC-PolypHD]<br/>72.93% (f) [ETIS-Larib]<br/>98.46% (f) [P] | N/A | F1: 0.9073, F2: 0.9127 (f) [CVC-ColonDB]<br/>F1: 0.8065, F2: 0.7911 (f) [CVC-PolypHD]<br/>F1: 0.7643, F2: 0.7870 (f) [ETIS-Larib]<br/>F1: 0.966, F2: 0.961 (f) [P] | Yes (CVC-ClinicDB, CVC-ColonDB, ETIS-Larib)<br/>No (WCE video)
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | 86% (f) [CVC-ClinicDB]<br/>83% (f) [ETIS-Larib]<br/>93% (f) [P] | 80% (f) [CVC-ClinicDB]<br/>74% (f) [ETIS-Larib]<br/>86% (f) [P] | N/A | F1: 0.82, F2: 0.85 (f) [CVC-ClinicDB]<br/>F1: 0.79, F2: 0.81 (f) [ETIS-Larib]<br/>F1: 0.89, F2: 0.92 (f) [P] | Yes
 [Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | 90.21% (f) [P] | 74.51% (f) [P] | 94.07% (f) [P] | Accuracy: 93.19%, F1: 0.81, F2: 0.86 (f) [P] | Yes
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | 93.67% (f) [P] | N/A | 98.36% (f) [P] | Accuracy: 96.04%, AP: 94.92% (f) [P] | Yes
+[Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015) | 82.7% (pi) [CVC-ClinicDB] <br/> 90.9% (pi) [ETIS-Larib] <br/> 82.4% (pi) [CVC-ColonDB] | 70.2% (pi) [CVC-ClinicDB] <br/> 70.2 (pi) [ETIS-Larib] <br/> 62% (pi) [CVC-ColonDB] | - | Accuracy: 99.02%, F1: 0.76, F2: 0.798 (pi) [CVC-ClinicDB] <br/>  Accuracy: 99.6%, F1: 0.7923, F2: 0.858 (pi) [ETIS-Larib] <br/> Accuracy: 98.2%, F1: 0.707, F2: 0.773 (pi) (pi) [CVC-ColonDB] | Yes (CVC-ClinicDB, CVC-ColonDB, ETIS-Larib)
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | 92% (f) [P] <br/> 90% (f) [P: WL] <br/> 97% (f) [P: NBI] <br/> 98% (p) [P] | 86% (f) [P] <br/> 83% (f) [P: WL] <br/> 97% (f) [P: NBI] | N/A | F1: 0.88, F2: 0.88 (f) [P] <br/> F1: 0.86, F2: 0.84 (f) [P: WL] <br/> F1: 0.97, F2: 0.97 (f) [P: NBI]| Yes
 
 ## Polyp Classification
 
 Performance metrics on public and private datasets of all polyp classification studies.
 
-- Between square brackets it is specified the dataset used, where “P” stands for private. 
+- Between square brackets it is specified the dataset used, where "P" stands for private. 
 
 Study | Classes | Recall (sensitivity) | Specificity | PPV | NPV | Others | Polyp-level vs. frame-level | Dataset type
 --- | --- | --- | --- | --- | --- | --- | --- | ---
@@ -297,7 +300,7 @@ Study | Classes | Recall (sensitivity) | Specificity | PPV | NPV | Others | Poly
 
 Performance metrics on public and private datasets of all simultaneous polyp detection and classification studies.
 
-- Between square brackets it is specified the dataset used, where “P” stands for private.
+- Between square brackets it is specified the dataset used, where "P" stands for private.
 - AP<sub>IoU</sub> stands for Average Precision and mAP<sub>IoU</sub> for Mean Average Precision (i.e. the mean of each class AP), calculated at the specified IoU (Intersection over Union) level.
 
 Study | Classes | AP | mAP | Manually selected images?
