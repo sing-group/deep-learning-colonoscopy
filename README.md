@@ -72,6 +72,7 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Feb. 2018 | Conventional | NBI | Neoplastic vs. hyperplastic | No
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Apr. 2019 | Conventional | NBI, WL | Endoscopically curable lesions vs. endoscopically incurable lesion | No
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | June 2019 | Conventional | N/A | Adenoma vs. hyperplastic vs. traditional serrated adenoma | No
+[Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | Oct. 2019 | Conventional | NBI, WL | Adenoma vs. serrated | Yes
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Dec. 2019 | Conventional | N/A | *Paris classification*: not dangeours (types Ip, Is, IIa, and IIb) vs. not dangerous (type  IIc) vs. cancer (type III) | No
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Jan. 2020 | Conventional | WL | *Kudo's classification*: malignant (types I, II, III, and IV) vs. non-malignant (type V) | No
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Feb. 2020 | Conventional | NBI, BLI | *Modified Sano's (MS) classification*: MS I - Hyperplastic, MS II - Low-grade tubular adenomas, MS IIo - Nondysplastic or low-grade sessile serrated adenoma/polyp (SSA/P), MS IIIa - Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion, MS IIIb - Invasive colorectal cancers | Yes
@@ -132,6 +133,8 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134) | N/A | 3 017 088 | - | 930 | Polyp detection | Used as training set.
 [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134) | 64 (47 with polyps and 17 without polyps) | N/A | N/A | 87 | Polyp detection | Used as testing set.
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | 552 | N/A | - | 963 | Polyp classification (hyperplastic, sessile serrated adenomas, adenomas) | 
+[Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | N/A | 5 278 <br/> Adenoma: 3 310 <br/> Serrated: 1 968 | - | 5 278 | Polyp classification (adenoma vs. serrated) | Used as training set.
+[Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | N/A | 634 | - | N/A | Polyp classification (adenoma vs. serrated) | Used as testing set.
 [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | 283 | 1 991 | - | N/A | Polyp detection | Adenomatous polyps.
 [Ahmad et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1135) | N/A | 83 716 <br/> With polyps: 14 634 <br/> Without polyps: 69 082  | 17 | 83 | Polyp localization | White Light Images.
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | N/A | 55 | N/A | 67 | Polyp localization | Wireless Capsule Endoscopy videos. <br/> Used as testing set.
@@ -169,6 +172,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | Detection | DenseNet | Tensorflow | - | All | - | FCL
 [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | Localization | SSD Inception v2 | Tensorflow | N/A | N/A | - | -
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Localization and classification | Faster R-CNN with Inception Resnet v2 | Tensorflow | COCO | All | - | -
+[Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | Classification | Inception ResNet-v2 | Tensorflow | ImageNet | N/A | Last layer | Graded scale transformation with sigmoid activation
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Classification | ResNet-50, ResNet-101, Xception, VGG19, Inception v3 | Keras (Tensorflow) | Yes | N/A | Last layer | N/A
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Classification | VGG16 | Keras (Tensorflow) | ImageNet | None, Last three | Last layer | Dense with sigmoid activation
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | Localization and Classification | SSD (Single Shot MultiBox Detector) | Caffe | N/A | All | - | -
@@ -234,7 +238,7 @@ Num. Studies |22|16|9|6|5|5|5|4|4|2|2|2|1|1|1|1|1|1|1|1
 
 Framework/Library | # Studies | Used by
 --- | --- | --- 
-Tensorflow | 8 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645), [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576), [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649), [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
+Tensorflow | 9 | [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645), [Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576), [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649), [Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429), [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
 Caffe | 7 | [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087), [Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133), [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659), [Jia X. et al. 2020](https://doi.org/10.1109/TASE.2020.2964827)
 Keras | 6 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
 C3D | 2 | [Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134)
@@ -289,7 +293,8 @@ Study | Recall (sensitivity) | Precision (PPV) | Specificity | Others | Manually
 
 Performance metrics on public and private datasets of all polyp classification studies.
 
-- Between square brackets it is specified the dataset used, where "P" stands for private. 
+- Between square brackets it is specified the dataset used, where "P" stands for private.
+- Performances marked with an * are reported on training datasets.
 
 Study | Classes | Recall (sensitivity) | Specificity | PPV | NPV | Others | Polyp-level vs. frame-level | Dataset type
 --- | --- | --- | --- | --- | --- | --- | --- | ---
@@ -298,6 +303,7 @@ Study | Classes | Recall (sensitivity) | Specificity | PPV | NPV | Others | Poly
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Neoplastic vs. hyperplastic | 96.3% [P] | 78.1% [P] | 89.6% [P] | 91.5% [P] | N/A | frame | image dataset
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Endoscopically curable lesions vs. endoscopically incurable lesions | 88.2% [P] | 77.9% [P] | 92.1% [P] | 69.3% [P] | Acc: 85.5% [P] | frame | image dataset
 [Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | Hyperplastic vs. serrated adenoma (near focus)<br/>Hyperplastic vs. adenoma (far focus) | 57.14% (hyperplastic vs. serrated) [P] <br/>75.63% (hyperplastic vs. adenoma) [P] | 68.52% (hyperplastic vs. serrated) [P] <br/>63.79% (hyperplastic vs. adenoma) [P] | N/A | N/A | Acc: 67.21% (hyperplastic vs. serrated) [P] <br/>Acc: 72.48% (hyperplastic vs. adenoma) [P] | frame | image dataset
+[Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | Adenoma vs. serrated | 95.7% [P] * | 89.9% [P] * | 94.1% [P] * | 92.6% [P] * | Acc: 93.6%, F1: 0.948, F2: 0.953 [P] * | polyp | image dataset
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Not dangerous vs. dangerous vs. cancer | 88% (Cancer vs. others) [P] <br/> 84% (Not dangerous vs. others) [P] <br/> 90% (Dangerous vs. others) [P] | 94% (Cancer vs. others) [P] <br/> 93% (Not dangerous vs. others) [P] <br/> 93% (Dangerous vs. others) | 88% (Cancer vs. others) [P] <br/> 87% (Not dangerous vs. others) [P] <br/> 86% (Dangerous vs. others) | N/A | Acc: 87.1% [P] <br/> F1: 0.88 (Cancer vs. others) [P] <br/> F1: 0.86 (Not dangerous vs. others) [P] <br/> F1: 0.88 (Dangerous vs. others) | frame | image dataset
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Malignant vs. non-malignant | 86% [P] | N/A | 81% [P] | N/A | Acc: 83% [P] <br/>F1: 0.83 [P] | frame | image dataset
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | 5-class (I, II, IIo, IIIa, IIIb)<br/><br/> Adenoma (classes II + IIo + IIIa) vs. hyperplastic (class I) | 97% (adenoma vs. hyperplastic) [P: AU] <br/> 100% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 100% (adenoma vs. hyperplastic) [P: JP-BLI] | 51% (adenoma vs. hyperplastic) [P: AU] <br/> 0% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 0% (adenoma vs. hyperplastic) [P: JP-BLI] | 95% (adenoma vs. hyperplastic) [P: AU] <br/> 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | 63.5% (adenoma vs. hyperplastic) [P: AU] <br/> - (adenoma vs. hyperplastic) [P: JP-NBI] <br/> - (adenoma vs. hyperplastic) [P: JP-BLI] | AUC (5-class): 94.3% [P: AU] <br/> AUC (5-class): 84.5% [P: JP-NBI] <br/>AUC (5-class): 90.3% [P: JP-BLI] <br/><br/>Acc: 72.3% (5-class) [P: AU] <br/> Acc: 59.8% (5-class) [P: JP-NBI] <br/> Acc: 53.1% (5-class) [P: JP-BLI] <br/><br/> Acc: 92.7% (adenoma vs. hyperplastic) [P: AU] <br/> Acc: 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> Acc: 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | frame | image dataset
