@@ -1,4 +1,7 @@
 # Deep Learning for Polyp Detection and Classification in Colonoscopy
+> This repository was created from the following review paper: A. Nogueira-Rodríguez; R. Domínguez-Carbajales; H. López-Fernández; Á. Iglesias; J. Cubiella; F. Fdez-Riverola; M. Reboiro-Jato; D. Glez-Peña (2020) [**Deep Neural Networks approaches for detecting and classifying colorectal polyps**](https://doi.org/10.1016/j.neucom.2020.02.123). *Neurocomputing*.
+>
+> Please, cite it if you find it useful for your research.
 
 This repository collects the most relevant studies applying Deep Learning for Polyp Detection and Classification in Colonoscopy from a technical point of view, focusing on the low-level details for the implementation of the DL models. In first place, each study is categorized in three types: (i) polyp detection and localization, (ii) polyp classification, and (iii) simultaneous polyp detection and classification (i.e. studies based on the usage of a single model such as YOLO or SSD to performs simultaneous polyp detection and classification). Secondly, a summary of the public datasets available as well as the private datasets used in the studies is provided. The third section focuses on technical aspects such as the Deep Learning architectures, the data augmentation techniques and the libraries and frameworks used. Finally, the fourth section summarizes the performance metrics reported by each study.
 
