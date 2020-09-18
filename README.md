@@ -78,13 +78,13 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | Oct. 2019 | Conventional | NBI, WL | Adenoma vs. serrated | Yes
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Dec. 2019 | Conventional | N/A | *Paris classification*: not dangeours (types Ip, Is, IIa, and IIb) vs. not dangerous (type  IIc) vs. cancer (type III) | No
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Jan. 2020 | Conventional | WL | *Kudo's classification*: malignant (types I, II, III, and IV) vs. non-malignant (type V) | No
-[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Feb. 2020 | Conventional | NBI, BLI | *Modified Sano's (MS) classification*: MS I - Hyperplastic, MS II - Low-grade tubular adenomas, MS IIo - Nondysplastic or low-grade sessile serrated adenoma/polyp (SSA/P), MS IIIa - Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion, MS IIIb - Invasive colorectal cancers | Yes
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Feb. 2020 | Conventional | NBI, BLI | *Modified Sano's (MS) classification*: MS I (Hyperplastic) vs. MS II (Low-grade tubular adenomas) vs. MS IIo (Nondysplastic or low-grade sessile serrated adenoma/polyp [SSA/P]) vs. MS IIIa (Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion) vs. MS IIIb (Invasive colorectal cancers) | Yes
 
 ## Simultaneous Polyp Detection and Classification
 
 Study | Date | Endoscopy type | Imaging technology | Localization type | Multiple polyp | Classes | Real time
 --- | --- | --- | --- | --- | --- | --- | ---
-[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521)<sup>1</sup> | Apr. 2019 | Conventional | N/A | Bounding box | Yes | Modified Sano's (MS) classification*: MS I - Hyperplastic, MS II - Low-grade tubular adenomas, MS IIo - Nondysplastic or low-grade sessile serrated adenoma/polyp (SSA/P), MS IIIa - Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion, MS IIIb - Invasive colorectal cancers | No
+[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521)<sup>1</sup> | Apr. 2019 | Conventional | N/A | Bounding box | Yes | *Modified Sano's (MS) classification*: MS I (Hyperplastic) vs. MS II (Low-grade tubular adenomas) vs. MS IIo (Nondysplastic or low-grade sessile serrated adenoma/polyp [SSA/P]) vs. MS IIIa (Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion) vs. MS IIIb (Invasive colorectal cancers) | No
 [Liu X. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896649) | Oct. 2019 | Conventional | WL | Bounding box | Yes | Polyp vs. adenoma | No
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659)<sup>2</sup> | Feb. 2020 | Conventional | NBI, WL | Bounding box | Yes | Adenoma vs. hyperplastic vs. sesile serrated adenoma/polyp (SSAP) vs. cancer vs. other types (Peutz-Jeghers, juvenile, or inflammation polyps) | Yes
 
