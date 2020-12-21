@@ -63,6 +63,7 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 [Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015) | Dec. 2019 | Conventional | N/A | Binary mask | No | No
 [Jia X. et al. 2020](https://doi.org/10.1109/TASE.2020.2964827) | Jan. 2020 | Conventional | N/A | Binary mask | Yes | No
 [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | May 2020 | Conventional | N/A | Bounding box | Yes | No
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | May 2020 | Conventional | N/A | Bounding box | Yes | Yes
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | Feb. 2021 | Conventional | WL | Bounding box | Yes | Yes
 
 ## Polyp Classification
@@ -98,7 +99,7 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 
 Dataset | References | Description | Format | Resolution (w x h) | Ground truth | Used in
 --- | --- | --- | --- | --- | --- | ---
-CVC-ClinicDB | [Bernal et al. 2015](https://doi.org/10.1016/j.compmedimag.2015.02.007) <br/> https://polyp.grand-challenge.org/CVCClinicDB/ | 612 sequential WL images with polyps extracted from 31 sequences with 31 different polyps. | Image | 388 × 284 | Polyp locations (binary mask)  | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015), [Jia X. et al. 2020](https://doi.org/10.1109/TASE.2020.2964827), [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663), [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897)
+CVC-ClinicDB | [Bernal et al. 2015](https://doi.org/10.1016/j.compmedimag.2015.02.007) <br/> https://polyp.grand-challenge.org/CVCClinicDB/ | 612 sequential WL images with polyps extracted from 31 sequences with 31 different polyps. | Image | 388 × 284 | Polyp locations (binary mask)  | [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402), [Wang et al. 2018](https://doi.org/10.1038/s41551-018-0301-3), [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015), [Jia X. et al. 2020](https://doi.org/10.1109/TASE.2020.2964827), [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663), [Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1), [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897)
 CVC-ColonDB | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 380 sequential WL images with polyps extracted from 15 videos. | Image | 574 × 500 | Polyp locations (binary mask) | [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821), [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020), [Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Tashk et al. 2019](https://doi.org/10.1109/ICCAIRO47923.2019.00015), [Jia X. et al. 2020](https://doi.org/10.1109/TASE.2020.2964827), [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897)
 CVC-EndoSceneStill | [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 912 WL images with polyps extracted from 44 videos (CVC-ClinicDB + CVC-ColonDB). | Image | 574 × 500, 388 × 284  | Locations for polyp, background, lumen and specular lights (binary mask) | -
 CVC-PolypHD | [Bernal et al. 2012](https://doi.org/10.1016/j.patcog.2012.03.002) <br/> [Vázquez et al. 2017](https://doi.org/10.1155/2017/4037190) | 56 WL images. | Image | 1920 × 1080 | Polyp locations (binary mask) | [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404)
@@ -156,6 +157,9 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | N/A | 49 <br/> MS I: 9 <br/> MS II: 10 <br/> MS IIo: 10 <br/> MS IIIa: 11 <br/> MS IIIb: 9 | - | N/A | Polyp classification (5 classes) | Japan (JP) dataset (BLI). <br/> Used as testing set.
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | 3 417 (3 021 with polyps and 396 without polyps) | 20 431 <br/><br/> WL: 17 566 <br/> - Adenoma: 9 310 <br/> - Hyperplastic: 2 002 <br/> - SSAP: 116 <br/> - Cancer: 1 468 <br/> - Other types: 657 <br/> - Normal mucosa: 4 013 <br/><br/> NBI: 2 865 <br/> - Adenoma: 2 085 <br/> - Hyperplastic: 519 <br/> - SSAP: 23 <br/> - Cancer: 131 <br/> - Other types: 107 <br/> - Normal mucosa: 0 | - | 4 752 <br/> Adenoma: 3 513 <br/> Hyperplastic: 1 058 <br/> SSAP: 22 <br/> Cancer: 68 <br/> Other types: 91 | Polyp localization and classification (Adenoma vs. hyperplastic vs. SSAP vs. cancer vs. other types) | Used as training set.
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | 174 | 7 077 <br/><br/> WL: 6 748 <br/> - Adenoma: 639 <br/> - Hyperplastic: 145 <br/> - SSAP: 33 <br/> - Cancer: 30 <br/> - Other types: 27 <br/> - Normal mucosa: 5 874 <br/><br/> NBI: 329 <br/> - Adenoma: 208 <br/> - Hyperplastic: 69 <br/> - SSAP: 8 <br/> - Cancer: 3 <br/> - Other types: 10 <br/> - Normal mucosa: 31 | - | 309 <br/> Adenoma: 218 <br/> Hyperplastic: 63 <br/> SSAP: 7 <br/> Cancer: 4 <br/> Other types: 17 | Polyp localization and classification (Adenoma vs. hyperplastic vs. SSAP vs. cancer vs. other types) | Used as testing set.
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | 103 | 8 075 | 181 | N/A | Polyp localization | Used as training set.
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | 203 | 420 | N/A | 322 hyperplastic or sessile serrated adenomas | Polyp localization | Used as training set.
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | 7 | 108 778 <br/> - With polyps: 7 022 <br/> - Without polyps: 101 756 | 7 | 26 | Polyp localization | Used as testing set.
 
 # Deep Learning Models and Architectures
 
@@ -183,6 +187,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Classification | VGG16 | Keras (Tensorflow) | ImageNet | None, Last three | Last layer | Dense with sigmoid activation
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | Localization and Classification | SSD (Single Shot MultiBox Detector) | Caffe | N/A | All | - | -
 [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | Localization | YOLOv3, RetinaNet | N/A | ImageNet | N/A | N/A | N/A
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | Localization | YOLOv2 | N/A | N/A | N/A | N/A | N/A
 
 ### Custom Architectures
 
@@ -213,34 +218,35 @@ Study | Task | Based on | Highlights
 
 ## Data Augmentation Strategies
 
-&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Translation (Shifting) | Zooming | Crop | Random brightness | Gaussian smoothing | Scale | Resize | Saturation adjustment | Gaussian distortion | Random contrast | Exposure adjustment | Histogram equalization | Skew | Random erasing |Color distribution adjust|Clipping|Blurring|Color augmentations in HSV
-:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---: | :---: | :---: | :---: | :---: | :---:| :---:| :---:| :---: 
-Num. Studies |23|17|9|6|6|5|5|4|4|2|2|2|1|1|1|1|1|1|1|1|1
-[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  | X |  |  | X | X |  |  |  |  |  |  |  |  |  ||
-[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  | |  | |  ||
-[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) |  | X |  |  |  | X |  |  |  | X |  |  |  |  |  |  |  |  |  ||
-[Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020) |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  |  |  | X | X |  |  |  |  | X |  |  |  |  |  |  ||
-[Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  | X |  | X | X |  |  |  |  |  |  |  |  |  |  |  ||
-[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | X | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  |  |  | X | X | X |  |  |  |  |  |  |  |  |  |  ||
-[Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) | X | X | X |  | X |  |  |  |  |  |  |  |  |  |  | |  |  |  ||
-[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521) | X | X | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  ||
-[Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | X |  |  |  |  |  |  |  |  |  | X |  |  | X |  |  |  |  |  ||
-[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  |  |  |  | X | X |  |  |  |  |  | X |  |  |  |  ||
-[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | X | X |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  | X |  ||
-[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  | X |  | X |  |  |  | X | X |  |  |  | X | X |  |  ||
-[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X | X | X |  | |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  ||
-[Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | X |  | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  | X | X |
-[Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897)| X | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | X 
+&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Translation (Shifting) | Zooming | Random brightness | Crop | Gaussian smoothing | Scale | Resize | Saturation adjustment | Gaussian distortion | Random contrast |Blurring| Exposure adjustment | Histogram equalization | Skew | Random erasing |Color distribution adjust|Clipping|Color augmentations in HSV|Sharpening
+:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---: | :---:| :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: 
+Num. Studies |23|17|9|6|6|6|5|4|4|2|2|2|2|2|1|1|1|1|1|1|1|1
+[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  |  | X |  | X | X |  |  |  |  |  |  |  |  |  |  |  |
+[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  | |  | |  |  |
+[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) |  | X |  |  |  |  | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |
+[Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020) |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  |  | X |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |
+[Zheng et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | X | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  |  | X |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |
+[Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) | X | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  | |  |  |  |  |
+[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521) | X | X | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |
+[Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | X |  |  |  |  |  |  |  |  |  | X |  |  |  | X |  |  |  |  |  |  |
+[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  |  |  |  | X | X |  |  |  |  |  |  | X |  |  |  |  |  |
+[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | X | X |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  |  | X |  |  |
+[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  | X | X |  |  |  |  | X | X |  |  |  |  | X | X |  |  |  |
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X | X | X | |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
+[Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | X |  | X |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  | X |  |
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) |  |  |  |  |  | X |  |  |  |  |  |  | X | X |  |  |  |  |  |  |  | X 
+[Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | X | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | X |
 
 ## Frameworks and Libraries
 
@@ -296,6 +302,7 @@ Study | Recall (sensitivity) | Precision (PPV) | Specificity | Others | Manually
 [Jia X. et al. 2020](https://doi.org/10.1109/TASE.2020.2964827) | 92.1% (f) [CVC-ClinicDB] <br/> 59.4% (pi) [CVC-ClinicDB] <br/> 81.7% (f) [ETIS-Larib] | 84.8% (f) [CVC-ClinicDB] <br/> 85.9% (pi) [CVC-ClinicDB] <br/> 63.9% (f) [ETIS-Larib] | - | F1: 0.883, F2: 0.905 (f) [CVC-ClinicDB] <br/> F1: 0.702, F2: 0.633, Jaccard: 74.7±20.5, Dice: 83.9±13.6 (pi) [CVC-ClinicDB] <br/> F1: 0.717, F2: 0.774 (f) [ETIS-Larib] | Yes (CVC-ClinicDB, ETIS-Larib)
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284821756284820910659) | 92% (f) [P] <br/> 90% (f) [P: WL] <br/> 97% (f) [P: NBI] <br/> 98% (p) [P] | 86% (f) [P] <br/> 83% (f) [P: WL] <br/> 97% (f) [P: NBI] | N/A | F1: 0.88, F2: 0.88 (f) [P] <br/> F1: 0.86, F2: 0.84 (f) [P: WL] <br/> F1: 0.97, F2: 0.97 (f) [P: NBI] | Yes
 [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | 92% (f) [CVC-ClinicVideoDB] | 87.50% (f) [CVC-ClinicVideoDB] | N/A | F1: 0.897, F2: 0.911 (f) [CVC-ClinicVideoDB] | No
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | 96.7% (f) [P] <br/> 90.2% (f) [CVC-ClinicDB] | 97.4% (f) [P] <br/> 98.2% (f) [CVC-ClinicDB] | N/A | F1: 0.97, F2: 0.97 (f) [P] <br/> F1: 0.94, F2: 0.96 (f) [CVC-ClinicDB] | Yes (CVC-ClinicDB, private)
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | 86.54% (f) [ETIS-Larib]<br/>91% (f) [CVC-ColonDB] | 86.12% (f) [ETIS-Larib]<br/>88.35% (f) [CVC-ColonDB] | N/A | F1: 0.863, F2: 0.864 (f) [ETIS-Larib]<br/>F1: 0.896, F2: 0.904 (f) [CVC-ColonDB]  | Yes
 
 ## Polyp Classification
