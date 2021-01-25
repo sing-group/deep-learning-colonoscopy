@@ -81,6 +81,7 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Dec. 2019 | Conventional | N/A | *Paris classification*: not dangeours (types Ip, Is, IIa, and IIb) vs. not dangerous (type  IIc) vs. cancer (type III) | No
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Jan. 2020 | Conventional | WL | *Kudo's classification*: malignant (types I, II, III, and IV) vs. non-malignant (type V) | No
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Feb. 2020 | Conventional | NBI, BLI | *Modified Sano's (MS) classification*: MS I (Hyperplastic) vs. MS II (Low-grade tubular adenomas) vs. MS IIo (Nondysplastic or low-grade sessile serrated adenoma/polyp [SSA/P]) vs. MS IIIa (Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion) vs. MS IIIb (Invasive colorectal cancers) | Yes
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | May 2020 | Conventional | WL| 7-class: CRC T1 vs. CRC T2 vs. CRC T3 vs. CRC T4 vs. high-grade dysplasia (HGD) vs. tubular adenoma with or without low grade dysplasia (TA) vs. non-neoplastic lesions <br/><br/> 4-class: advanced CRC (T2, T3, and T4) vs. early CRC/HGD (CRC T1 and HGD) vs. TA vs. non-neoplastic lesions <br/><br/> Advanced colorectal lesions (HGD and T1, T2, T3, and T4 lesions) vs. non-advanced colorectal lesions (TA and non-neoplastic lesions) <br/><br/> Neoplastic lesions (TA, HGD, and stages T1, T2, T3, and T4) vs. non-neoplastic lesions | No
 
 ## Simultaneous Polyp Detection and Classification
 
@@ -160,6 +161,8 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | 103 | 8 075 | 181 | N/A | Polyp localization | Used as training set.
 [Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | 203 | 420 | N/A | 322 hyperplastic or sessile serrated adenomas | Polyp localization | Used as training set.
 [Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | 7 | 108 778 <br/> - With polyps: 7 022 <br/> - Without polyps: 101 756 | 7 | 26 | Polyp localization | Used as testing set.
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | 1 339 | 3 828 <br/> - Tubular adenoma: 1 316 <br/> - Non-neoplastic: 896 <br/> - High-grade dysplasia: 621 <br/> | - | N/A | Polyp classification | Used as training/test set.
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | 240 | 240 <br/> - Tubular adenoma: 116 <br/> - Non-neoplastic: 113 <br/> - Early CRC/High-grade dysplasia: 8<br/> - Advanced CRC: 3 | - | N/A | Polyp classification | External validation dataset.
 
 # Deep Learning Models and Architectures
 
@@ -188,6 +191,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284820910659) | Localization and Classification | SSD (Single Shot MultiBox Detector) | Caffe | N/A | All | - | -
 [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | Localization | YOLOv3, RetinaNet | N/A | ImageNet | N/A | N/A | N/A
 [Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) | Localization | YOLOv2 | N/A | N/A | N/A | N/A | N/A
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | Classification | ResNet-152, Inception-ResNet-v2 | PyTorch | ImageNet | All | N/A | N/A
 
 ### Custom Architectures
 
@@ -220,7 +224,7 @@ Study | Task | Based on | Highlights
 
 &nbsp; | Rotation | Flipping (Mirroring) | Shearing | Translation (Shifting) | Zooming | Random brightness | Crop | Gaussian smoothing | Scale | Resize | Saturation adjustment | Gaussian distortion | Random contrast |Blurring| Exposure adjustment | Histogram equalization | Skew | Random erasing |Color distribution adjust|Clipping|Color augmentations in HSV|Sharpening
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---: | :---:| :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: 
-Num. Studies |23|17|9|6|6|6|5|4|4|2|2|2|2|2|1|1|1|1|1|1|1|1
+Num. Studies |23|18|9|6|6|6|5|4|4|2|2|2|2|2|1|1|1|1|1|1|1|1
 [Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  |  | X |  | X | X |  |  |  |  |  |  |  |  |  |  |  |
 [Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  | |  | |  |  |
 [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
@@ -246,6 +250,7 @@ Num. Studies |23|17|9|6|6|6|5|4|4|2|2|2|2|2|1|1|1|1|1|1|1|1
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | X |  | X |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  | X |  |
 [Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) |  |  |  |  |  | X |  |  |  |  |  |  | X | X |  |  |  |  |  |  |  | X 
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) |  | X |  |  |  |   |  |  |  |  |  |  |   |   |  |  |  |  |  |  |  |   
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | X | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | X |
 
 ## Frameworks and Libraries
@@ -257,6 +262,7 @@ Caffe | 7 | [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087), [Y
 Keras | 6 | [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037), [Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf), [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404), [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059), [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816), [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501)
 C3D | 2 | [Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134)
 MatConvNet (MATLAB) | 1 | [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725)
+PyTorch | 1 | [Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593)
 
 # Performance
 
@@ -324,6 +330,7 @@ Study | Classes | Recall (sensitivity) | Specificity | PPV | NPV | Others | Poly
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Malignant vs. non-malignant | 86% [P] | N/A | 81% [P] | N/A | Acc: 83% [P] <br/>F1: 0.83 [P] | frame | image dataset
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | 5-class (I, II, IIo, IIIa, IIIb)<br/><br/> Adenoma (classes II + IIo + IIIa) vs. hyperplastic (class I) | 97% (adenoma vs. hyperplastic) [P: AU] <br/> 100% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 100% (adenoma vs. hyperplastic) [P: JP-BLI] | 51% (adenoma vs. hyperplastic) [P: AU] <br/> 0% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 0% (adenoma vs. hyperplastic) [P: JP-BLI] | 95% (adenoma vs. hyperplastic) [P: AU] <br/> 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | 63.5% (adenoma vs. hyperplastic) [P: AU] <br/> - (adenoma vs. hyperplastic) [P: JP-NBI] <br/> - (adenoma vs. hyperplastic) [P: JP-BLI] | AUC (5-class): 94.3% [P: AU] <br/> AUC (5-class): 84.5% [P: JP-NBI] <br/>AUC (5-class): 90.3% [P: JP-BLI] <br/><br/>Acc: 72.3% (5-class) [P: AU] <br/> Acc: 59.8% (5-class) [P: JP-NBI] <br/> Acc: 53.1% (5-class) [P: JP-BLI] <br/><br/> Acc: 92.7% (adenoma vs. hyperplastic) [P: AU] <br/> Acc: 82.4% (adenoma vs. hyperplastic) [P: JP-NBI] <br/> Acc: 77.5% (adenoma vs. hyperplastic) [P: JP-BLI] | frame | image dataset
 [Ozawa. et al. 2020](https://doi.org/10.1177/1756284820910659) | Adenoma vs. hyperplastic vs. SSAP vs. cancer vs. other types | 97% (adenoma vs. other classes) [P: WL] <br/> 90% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 97% (adenoma vs. other classes) [P: NBI] <br/> 86% (adenoma vs. hyperplastic) [P: NBI] | <br/> 81% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 88% (adenoma vs. hyperplastic) [P: NBI] | 86% (adenoma vs. other classes) [P: WL] <br/> 98% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 83% (adenoma vs. other classes) [P: NBI] <br/> 98% (adenoma vs. hyperplastic) [P: NBI] | 85% (adenoma vs. other classes) [P: WL] <br/> 48% (adenoma vs. hyperplastic) [P: WL] <br/><br/> 91% (adenoma vs. other classes) [P: NBI] <br/> 54% (adenoma vs. hyperplastic) [P: NBI] | Acc: 83% (5-class) [P: WL] <br/> F1: 0.91, F1: 0.88 (adenoma vs. other classes) [P: WL] <br/> F1: 0.94, F2: 0.96 (adenoma vs. hyperplastic) [P: WL] <br/><br/>  Acc: 81% (5-class) [P: NBI] <br/> F1: 0.89, F2: 0.85 (adenoma vs. other classes) [P NBI] <br/> F1: 0.92, F2: 0.95 (adenoma vs. hyperplastic) [P: NBI] | frame | image dataset
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | 7-class (CRC T1 vs. CRC T2 vs. CRC T3 vs. CRC T4 vs. high-grade dysplasia (HGD) vs. tubular adenoma with or without low grade dysplasia (TA) vs. non-neoplastic lesions) <br/><br/> 4-class (advanced CRC (T2, T3, and T4) vs. early CRC/HGD (CRC T1 and HGD) vs. TA vs. non-neoplastic lesions) <br/><br/> Advanced colorectal lesions vs. non-advanced colorectal lesions <br/><br/> Neoplastic lesions vs. non-neoplastic lesions | 94.1% (Neoplastic vs. non-neoplastic) [P: test] <br/> 83.2% (Advanced vs. non-advanced) [P: test] | 34.1% (Neoplastic vs. non-neoplastic) [P: test] <br/> 89.7% (Advanced vs. non-advanced) [P: test] | 86.1% (Neoplastic vs. non-neoplastic) [P: test] <br/> 84.5% (Advanced vs. non-advanced) [P: test] | 65% (Neoplastic vs. non-neoplastic) [P: test] <br/> 88.7% (Advanced vs. non-advanced) [P: test] | Acc: 0.795, F1: 0.899, F2: 0.923, AUC: 0.832 (Neoplastic vs. non-neoplastic) [P: test] <br/> Acc: 93.5%, F1: 0.838, F2: 0.934, AUC: 0.935 (Advanced vs. non-advanced) [P: test] <br/><br/> Acc: 71.5%, AUC: 0.760 (Neoplastic vs. non-neoplastic) [P: external] <br/> Acc: 87.1%, AUC: 0.935 (Advanced vs. non-advanced) [P: external] <br/><br/> Acc (7-class): 60.2% [P: test] 74.7% [P: external] <br/> Acc (4-class): 67.7% [P: test] 76% [P: external] | frame | image dataset
 
 ## Simultaneous Polyp Detection and Classification
 
