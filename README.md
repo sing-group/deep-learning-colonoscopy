@@ -76,7 +76,7 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Komeda et al. 2017](https://doi.org/10.1159/000481227) | Dec. 2017 | Conventional | NBI, WL, Chromoendoscopy | Adenoma vs. non-adenoma | No
 [Chen et al. 2018](https://doi.org/10.1053/j.gastro.2017.10.010) | Feb. 2018 | Conventional | NBI | Neoplastic vs. hyperplastic | No
 [Lui et al. 2019](https://doi.org/10.1055/a-0849-9548) | Apr. 2019 | Conventional | NBI, WL | Endoscopically curable lesions vs. endoscopically incurable lesion | No
-[Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | June 2019 | Conventional | N/A | Adenoma vs. hyperplastic vs. traditional serrated adenoma | No
+[Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | June 2019 | Conventional | N/A | Adenoma vs. hyperplastic vs. serrated (sessile serrated adenoma/traditional serrated adenoma) | No
 [Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | Oct. 2019 | Conventional | NBI, WL | Adenoma vs. serrated | Yes
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Dec. 2019 | Conventional | N/A | *Paris classification*: not dangeours (types Ip, Is, IIa, and IIb) vs. not dangerous (type  IIc) vs. cancer (type III) | No
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Jan. 2020 | Conventional | WL | *Kudo's classification*: malignant (types I, II, III, and IV) vs. non-malignant (type V) | No
@@ -140,7 +140,7 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | 215 | 404 | - | N/A | Polyp localization | -
 [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134) | N/A | 3 017 088 | - | 930 | Polyp detection | Used as training set.
 [Misawa et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1134) | 64 (47 with polyps and 17 without polyps) | N/A | N/A | 87 | Polyp detection | Used as testing set.
-[Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | 552 | N/A | - | 963 | Polyp classification (hyperplastic, sessile serrated adenomas, adenomas) | 
+[Kandel et al. 2019](https://doi.org/10.1016/j.gie.2019.03.613) | 552 | N/A | - | 963 | Polyp classification (hyperplastic, serrated adenomas (sessile/traditional), adenomas) | 
 [Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | N/A | 5 278 <br/> Adenoma: 3 310 <br/> Serrated: 1 968 | - | 5 278 | Polyp classification (adenoma vs. serrated) | Used as training set.
 [Zachariah et al. 2019](https://doi.org/10.14309/ajg.0000000000000429) | N/A | 634 | - | N/A | Polyp classification (adenoma vs. serrated) | Used as testing set.
 [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | 283 | 1 991 | - | N/A | Polyp detection | Adenomatous polyps.
