@@ -29,6 +29,7 @@ Table of Contents:
    * [List of Acronyms and Abbreviations](README.md#list-of-acronyms-and-abbreviations)
    * [References and Further Reading](README.md#references-and-further-reading)
       * [Reviews](README.md#reviews)
+      * [Randomized Clinical Trials](README.md#randomized-clinical-trials)
 
 # Research
 
@@ -95,7 +96,7 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 
 1. Tian X. et al. 2019 is based on the usage of a single model (RetinaNet) that performs simultaneous polyp detection and classification. However, the paper only reports detection results using the ETIS-Larib dataset and therefore this results are included in the [Polyp Detection and Localization](README.md#polyp-detection-and-localization-1) section.
 2. Ozawa. et al. 2020 work is based on the usage of a single model (Single Show MultiBox Detector, SSD) that performs simultaneous polyp detection and classification. Nevertheless, since the detection and classification results are reported independently, they are included in the sections [Polyp Detection and Localization](README.md#polyp-detection-and-localization-1) and [Polyp Classification](README.md#polyp-classification-1), respectively.
- 
+
 # Datasets
  
 ## Public Datasets
@@ -380,3 +381,14 @@ Study | Classes | AP | mAP | Manually selected images?
 - Cristina Sánchez-Montes, Jorge Bernal, Ana García-Rodríguez, Henry Córdova, and Gloria Fernández-Esparrach. [Review of computational methods for the detection and classification of polyps in colonoscopy imaging](https://doi.org/10.1016/j.gastre.2019.11.003). Gastroenterol Hepatol. 2020 Apr; 43(4): 222-232.
 - Luisa F.Sánchez-Peralta, Luis Bote-Curiel, Artzai Picón, Francisco M.Sánchez-Margallo, J. Blas Pagador. [Deep learning to find colorectal polyps in colonoscopy: A systematic literature review](https://doi.org/10.1016/j.artmed.2020.101923). Artificial Intelligence in Medicine. 2020 Aug; 108: 101923.
 - Munish Ashat, Jagpal Singh Klair, Dhruv Singh, Arvind Rangarajan Murali, Rajesh Krishnamoorthi. [Impact of real-time use of artificial intelligence in improving adenoma detection during colonoscopy: A systematic review and meta-analysis](https://doi.org/10.1055/a-1341-0457). Endoscopy International Open. 2021 March; 09(04): E513-E521.
+
+## Randomized Clinical Trials
+
+Study | Title | Date | Number of patients
+--- | --- | --- | --- 
+[Wang et al. 2019](https://doi.org/10.1136/gutjnl-2018-317500) | Real-time automatic detection system increases colonoscopic polyp and adenoma detection rates: a prospective randomised controlled study | Sep. 2019 | 1058
+[Gong et al. 2020](https://doi.org/10.1016/s2468-1253%2819%2930413-3) | Detection of colorectal adenomas with a real-time computer-aided system (ENDOANGEL): a randomised controlled study | Jan. 2020 |  704
+[Wang et al. 2020](https://doi.org/10.1016/S2468-1253%2819%2930411-X) | Effect of a deep-learning computer-aided detection system on adenoma detection during colonoscopy (CADe-DB trial): a double-blind randomised study | Jan. 2020 |  1010
+[Liu et al. 2020](https://doi.org/10.4103/sjg.SJG_377_19) | Study on detection rate of polyps and adenomas in artificial-intelligence-aided colonoscopy | Feb. 2020 |  1026
+[Su et al. 2019](https://doi.org/10.1016/j.gie.2019.08.026) | Impact of a real-time automatic quality control system on colorectal polyp and adenoma detection: a prospective randomized controlled study (with videos) | Feb. 2020 | 659
+[Repici et al. 2020](https://doi.org/10.1053/j.gastro.2020.04.062) | Efficacy of Real-Time Computer-Aided Detection of Colorectal Neoplasia in a Randomized Trial | Aug. 2020 | 685 
