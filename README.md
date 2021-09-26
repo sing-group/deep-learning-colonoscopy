@@ -69,7 +69,8 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | Dec. 2020 | Conventional | N/A | Bounding box | No | Yes
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | Feb. 2021 | Conventional | WL | Bounding box | Yes | Yes
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | Feb. 2021 | Conventional | WL | Bounding box | Yes | Yes
-[Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | July. 2021 | Conventional | WL | Bounding box | Yes | Yes
+[Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | July 2021 | Conventional | WL | Bounding box | Yes | Yes
+[Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) | August 2021 | Conventional | NBI, WL | Bounding box | Yes | Yes
 
 ## Polyp Classification
 
@@ -86,7 +87,7 @@ Study | Date | Endoscopy type | Imaging technology | Classes | Real time
 [Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | Dec. 2019 | Conventional | N/A | *Paris classification*: not dangeours (types Ip, Is, IIa, and IIb) vs. dangerous (type  IIc) vs. cancer (type III) | No
 [Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | Jan. 2020 | Conventional | WL | *Kudo's classification*: malignant (types I, II, III, and IV) vs. non-malignant (type V) | No
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | Feb. 2020 | Conventional | NBI, BLI | *Modified Sano's (MS) classification*: MS I (Hyperplastic) vs. MS II (Low-grade tubular adenomas) vs. MS IIo (Nondysplastic or low-grade sessile serrated adenoma/polyp [SSA/P]) vs. MS IIIa (Tubulovillous adenomas or villous adenomas or any high-grade colorectal lesion) vs. MS IIIb (Invasive colorectal cancers) | Yes
-[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | May 2020 | Conventional | WL| 7-class: CRC T1 vs. CRC T2 vs. CRC T3 vs. CRC T4 vs. high-grade dysplasia (HGD) vs. tubular adenoma with or without low grade dysplasia (TA) vs. non-neoplastic lesions <br/><br/> 4-class: advanced CRC (T2, T3, and T4) vs. early CRC/HGD (CRC T1 and HGD) vs. TA vs. non-neoplastic lesions <br/><br/> Advanced colorectal lesions (HGD and T1, T2, T3, and T4 lesions) vs. non-advanced colorectal lesions (TA and non-neoplastic lesions) <br/><br/> Neoplastic lesions (TA, HGD, and stages T1, T2, T3, and T4) vs. non-neoplastic lesions | No
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | May 2020 | Conventional | WL | 7-class: CRC T1 vs. CRC T2 vs. CRC T3 vs. CRC T4 vs. high-grade dysplasia (HGD) vs. tubular adenoma with or without low grade dysplasia (TA) vs. non-neoplastic lesions <br/><br/> 4-class: advanced CRC (T2, T3, and T4) vs. early CRC/HGD (CRC T1 and HGD) vs. TA vs. non-neoplastic lesions <br/><br/> Advanced colorectal lesions (HGD and T1, T2, T3, and T4 lesions) vs. non-advanced colorectal lesions (TA and non-neoplastic lesions) <br/><br/> Neoplastic lesions (TA, HGD, and stages T1, T2, T3, and T4) vs. non-neoplastic lesions | No
 
 ## Simultaneous Polyp Detection and Classification
 
@@ -174,6 +175,7 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | 34 | - | 42 | N/A | Polyp localization | Used as testing dataset.
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | 262 | 1 482 | - | 1 683 | Polyp localization | RenjiImageDB. Used as testing set.
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | 14 |  8 837 <br/> With polyps:  3 294 <br/> Without polyps: 5 543 | 14 | 15 | Polyp localization | RenjiVideoDB. Used as testing set.
+[Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) | 330 |  28 576 <br/> White-light: 21 046 <br/> NBI:  7530 | - | 941 | Polyp localization | -
 
 # Deep Learning Models and Architectures
 
@@ -205,6 +207,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) | Classification | ResNet-152, Inception-ResNet-v2 | PyTorch | ImageNet | All | N/A | N/A
 [Li T. et al. 2020](https://doi.org/10.1055/a-1229-3927) | Detection | AlexNet | Caffe | ImageNet | N/A | N/A | N/A
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | Localization | EfficientNet B4, RetinaNet | N/A | No | - | N/A | N/A
+[Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) | Localization | YOLOv3 | MXNet | PASCAL VOC 2007 and 2012 | All | - | FCL
 
 ### Custom Architectures
 
@@ -237,40 +240,41 @@ Study | Task | Based on | Highlights
 
 ## Data Augmentation Strategies
 
-&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Translation (Shifting) | Random brightness | Crop | Zooming | Scale | Gaussian smoothing | Saturation adjustment | Gaussian distortion | Blurring | Resize | Random contrast | Exposure adjustment |Color augmentations in HSV | Histogram equalization | Skew | Random erasing | Color distribution adjust | Clipping | Sharpening | Mosaic | Cutmix | Mix-up | Color jittering
-:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: | :---: | :---: | :---: 
-Num. Studies |26|21|10|8|7|7|6|6|4|3|3|3|2|2|2|2|1|1|1|1|1|1|1|1|1|1
-[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  | X |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  | |  | |  |  |  |  |  |  
-[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) |  | X |  |  |  | X |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020) |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  | X |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  
-[Zheng Y. et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  | X |  | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | X | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  | X |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) | X | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  | |  |  |  |  |  |  |  |  
-[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521) | X | X | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | X |  |  |  |  |  |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  
-[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  |  |  |  | X | X |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  
-[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | X | X |  | X |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  
-[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  | X |  | X |  |  | X | X |  |  |  |  |  |  | X | X |  |  |  |  |  |  |  
-[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X | X | |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | X |  | X |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  
-[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) |  |  |  |  | X |  |  |  |  |  |  | X |  | X |  |  |  |  |  |  |  | X |  |  |  |  
-[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) |  | X |  |  |   |  |  |  |  |  |  |   |  |   |  |  |  |  |  |  |  |   |  |  |  |  
-[Li T. et al. 2020](https://doi.org/10.1055/a-1229-3927) | X |  |  | X |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |   |  |  |  |  
-[Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |   |  |  |  |  
-[Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  
-[Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503)  |  | X |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | X 
-[Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | X | X | X | X | X | X |  | X |  | X |  | X |  |  | X | X |  |  |  |  |  | X | X | X |  |  
+&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Translation (Shifting) | Crop | Random brightness | Zooming | Scale | Gaussian smoothing | Saturation adjustment | Gaussian distortion | Blurring | Resize | Random contrast | Exposure adjustment |Color augmentations in HSV | Histogram equalization | Skew | Random erasing | Color distribution adjust | Clipping | Sharpening | Mosaic | Cutmix | Mix-up | Color jittering|Random image expansion
+:---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: | :---: | :---: | :---: | :---: 
+Num. Studies |26|22|10|8|8|7|6|6|4|3|3|3|3|2|2|2|1|1|1|1|1|1|1|1|1|1|1
+[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X | X |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  | |  | |  |  |  |  |  |  |  
+[Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) |  | X |  |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020) |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  |  | X |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Zheng Y. et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  |  | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | X | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  |  | X |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) | X | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  | |  |  |  |  |  |  |  |  |  
+[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521) | X | X | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) | X | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | X |  |  |  |  |  |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  
+[Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  |  |  |  | X | X |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  
+[Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | X | X |  | X |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  
+[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  |  | X | X |  |  | X | X |  |  |  |  |  |  | X | X |  |  |  |  |  |  |  |  
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X | X |  | | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | X |  | X |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) |  |  |  |  |  | X |  |  |  |  |  | X |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) |  | X |  |  |  |   |  |  |  |  |  |   |  |   |  |  |  |  |  |  |  |   |  |  |  |  |  
+[Li T. et al. 2020](https://doi.org/10.1055/a-1229-3927) | X |  |  | X | X |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |   |  |  |  |  |  
+[Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |   |  |  |  |  |  
+[Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  
+[Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503)  |  | X |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | X |
+[Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | X | X | X | X | X | X |  | X |  | X |  | X |  |  | X | X |  |  |  |  |  | X | X | X |  |  |  
+[Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) |  | X |  |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  | X 
 
 ## Frameworks and Libraries
 
@@ -283,6 +287,7 @@ C3D | 2 | [Misawa et al. 2018](https://doi.org/10.1053/j.gastro.2018.04.003), [M
 PyTorch | 2 | [Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593), [Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519)
 MatConvNet (MATLAB) | 1 | [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725)
 DarkNet | 1 | [Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519)
+MXNet | 1 | [Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4)
 
 # Performance
 
@@ -334,6 +339,7 @@ Study | Recall (sensitivity) | Precision (PPV) | Specificity | Others | Manually
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | 86.54% (f) [ETIS-Larib]<br/> 91% (f) [CVC-ColonDB] | 86.12% (f) [ETIS-Larib]<br/>88.35% (f) [CVC-ColonDB] | N/A | F1: 0.863, F2: 0.864 (f) [ETIS-Larib]<br/>F1: 0.896, F2: 0.904 (f) [CVC-ColonDB] | Yes
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | 75.70% (f) [P]<br/> 71.63% (f) [ETIS-Larib]<br/> 0.664 (f) [CVC-ClinicVideoDB] | 85.54% (f) [P]<br/> 83.24% (f) [ETIS-Larib]<br/> 0.885 (f) [CVC-ClinicVideoDB] | N/A | F1: 0.799, F2: 0.773 (f) [P]<br/> F1: 0.77, F2: 0.737 (f) [ETIS-Larib]<br/> F1: 0.759, F2: 0.698 (f) [CVC-ClinicVideoDB] | Yes (ETIS-Larib, Private)<br/>No (CVC-ClinicVideoDB)
 [Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | 82.55% (f) [ETIS-Larib]<br/> 96.68% (f) [CVC-ColonDB] | 91.62% (f) [ETIS-Larib]<br/> 96.04% (f) [CVC-ColonDB] | N/A | F1: 0.868, F2: 0.842 (f) [ETIS-Larib]<br/> F1: 0.964, F2: 0.965 (f) [CVC-ColonDB] | Yes
+[Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) | 87% (f) [P] <br/> 89.91% (p) [P] | 89% (f) [P] | 54.97% (p) [P] | F1: 0.88 (f) [P] | Yes
 
 ## Polyp Classification
 
