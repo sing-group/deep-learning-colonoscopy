@@ -420,8 +420,8 @@ Study | Classes | AP | mAP | Recall (sensitivity) | Specificity | PPV | NPV | Ot
 - Cristina Sánchez-Montes, Jorge Bernal, Ana García-Rodríguez, Henry Córdova, and Gloria Fernández-Esparrach. [Review of computational methods for the detection and classification of polyps in colonoscopy imaging](https://doi.org/10.1016/j.gastre.2019.11.003). Gastroenterol Hepatol. 2020 Apr; 43(4): 222-232.
 - Luisa F.Sánchez-Peralta, Luis Bote-Curiel, Artzai Picón, Francisco M.Sánchez-Margallo, J. Blas Pagador. [Deep learning to find colorectal polyps in colonoscopy: A systematic literature review](https://doi.org/10.1016/j.artmed.2020.101923). Artificial Intelligence in Medicine. 2020 Aug; 108: 101923.
 - Munish Ashat, Jagpal Singh Klair, Dhruv Singh, Arvind Rangarajan Murali, Rajesh Krishnamoorthi. [Impact of real-time use of artificial intelligence in improving adenoma detection during colonoscopy: A systematic review and meta-analysis](https://doi.org/10.1055/a-1341-0457). Endoscopy International Open. 2021 March; 09(04): E513-E521.
-- Alexander Hann, Joel Troya, and Daniel Fitting. [Current status and limitations of artificial intelligence in colonoscopy](https://doi.org/10.1002/ueg2.12108). United European Gastroenteroly. 2021 Jun; 1-7.
-- Michelle Viscaino, Javier Torres Bustos, Pablo Muñoz, Cecilia Auat Cheein, and Fernando Auat Cheein. [Artificial intelligence for the early detection of colorectal cancer: comprehensive review of its advantages and misconceptions](https://doi.org/10.3748/wjg.v27.i38.6399). World Journal of Gastroenteroly. 2021 Oct; 27(38): 6399-6414.
+- Alexander Hann, Joel Troya, and Daniel Fitting. [Current status and limitations of artificial intelligence in colonoscopy](https://doi.org/10.1002/ueg2.12108). United European Gastroenterology. 2021 Jun; 1-7.
+- Michelle Viscaino, Javier Torres Bustos, Pablo Muñoz, Cecilia Auat Cheein, and Fernando Auat Cheein. [Artificial intelligence for the early detection of colorectal cancer: comprehensive review of its advantages and misconceptions](https://doi.org/10.3748/wjg.v27.i38.6399). World Journal of Gastroenterology. 2021 Oct; 27(38): 6399-6414.
 
 ## Randomized Clinical Trials
 
