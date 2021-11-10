@@ -71,6 +71,7 @@ Study | Date | Endoscopy type | Imaging technology | Localization type | Multipl
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | Dec. 2020 | Conventional | N/A | Bounding box | No | Yes
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | Feb. 2021 | Conventional | WL | Bounding box | Yes | Yes
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | Feb. 2021 | Conventional | WL | Bounding box | Yes | Yes
+[Misawa et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060) | Apr. 2021 | Conventional | WL | No | Yes | Yes
 [Livovsky et al. 2021](https://doi.org/10.1016/j.gie.2021.06.021) | June 2021 | Conventional | N/A | Bounding box | Yes | Yes
 [Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | July 2021 | Conventional | WL | Bounding box | Yes | Yes
 [Liu et al. 2021](https://doi.org/10.1016/j.media.2021.102052) | July 2021 | Conventional | N/A | Bounding box | Yes | Yes
@@ -125,7 +126,7 @@ PICCOLO | [Sánchez-Peralta et al. 2020](https://doi.org/10.3390/app10238501) <b
 LDPolypVideo | [Ma Y. et al. 2021](https://doi.org/10.1007/978-3-030-87240-3_37) <br/> https://github.com/dashishi/LDPolypVideo-Benchmark | 160 videos (40 266 frames: 33 884 polyp images and 6 382 non-polyp images) with 200 labeled polyps. <br/> 103 videos (861 400 frames: 371 400 polyp images and 490 000 non-polyp images) without full annotations. | Video | 768 x 576 (videos), 560 × 480 (images) | Polyp locations (bounding box) | -
 KUMC dataset | [Li K. et al. 2021](http://doi.org/10.1371/journal.pone.0255809) <br/> https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/FCBUOR | 80 colonoscopy video sequences. It also aggregates the CVC-ColonDB, ASU-Mayo Clinic Colonoscopy Video, and Colonoscopic Dataset datasets. | Image | Various resolutions | Polyp locations (bounding box) <br/> Polyp classification: Adenoma vs. Hyperplastic | [Li K. et al. 2021](http://doi.org/10.1371/journal.pone.0255809)
 CP-CHILD-A, CP-CHILD-B | [Wang W. et al. 2020](http://doi.org/10.1186/s12880-020-00482-3) <br/> https://figshare.com/articles/dataset/CP-CHILD_zip/12554042 | CP-CHILD-A contains 1 000 polyp images and 7 000 non-polyp images. <br/> CP-CHILD-B contains 400 polyp images and 1 100 normal or other pathological images. | Image | 256 × 256 | Polyp detection: polyp vs. non-polyp annotations | [Wang W. et al. 2020](http://doi.org/10.1186/s12880-020-00482-3)
-SUN | [Misawa. et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060) <br/> http://amed8k.sundatabase.org/ | 49 799 images with polyps from different 100 polyps. 102 761 non-polyp images from 13 video sequences. | Image | N/A | Polyp locations (bounding box) | -
+SUN | [Misawa et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060) <br/> http://amed8k.sundatabase.org/ | 49 799 images with polyps from different 100 polyps. 102 761 non-polyp images from 13 video sequences. | Image | N/A | Polyp locations (bounding box) | [Misawa et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060)
 
 ## Private Datasets
 
@@ -185,6 +186,7 @@ Study | Patients | No. Images | No. Videos | No. Unique Polyps | Purpose | Comme
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | 34 | - | 42 | N/A | Polyp localization | Used as testing dataset.
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | 262 | 1 482 | - | 1 683 | Polyp localization | RenjiImageDB. Used as testing set.
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | 14 | 8 837 <br/> With polyps: 3 294 <br/> Without polyps: 5 543 | 14 | 15 | Polyp localization | RenjiVideoDB. Used as testing set.
+[Misawa et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060) | N/A | 56 668 <br/> With polyps: 55 644 <br/> Without polyps: 1024 | N/A | N/A | Polyp localization | Used as development (train/validation split) dataset.
 [Livovsky et al. 2021](https://doi.org/10.1016/j.gie.2021.06.021) | 2 487 | With polyps: 204 687 (189 994 video frames + 14 693 still images) <br/> Without polyps: 80 M (80 M video frames + 158 646 still images) | 3 611 | 8 471 | Polyp localization | Used as training set.
 [Livovsky et al. 2021](https://doi.org/10.1016/j.gie.2021.06.021) | 1 181 | 33 M video frames | 1 393 | 3 680 | Polyp localization | Used as testing set.
 [Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) | 330 | 28 576 <br/> White-light: 21 046 <br/> NBI: 7 530 | - | 941 | Polyp localization | -
@@ -221,6 +223,7 @@ Study | Task | Models | Framework | TL | Layers fine-tuned | Layers replaced | O
 [Li T. et al. 2020](https://doi.org/10.1055/a-1229-3927) | Detection | AlexNet | Caffe | ImageNet | N/A | N/A | N/A
 [Sánchez-Peralta et al. 2020](https://doi.org/10.3390/app10238501) | Localization | Backbone: VGG-16 or Densenet121, Encoder-decoder: U-Net or LinkNet | Keras (Tensorflow) | No | - | N/A | N/A
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | Localization | EfficientNet B4, RetinaNet | N/A | No | - | N/A | N/A
+[Misawa et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060) | Localization | YOLOv3 | N/A | Yes | N/A | - | FCL
 [Livovsky et al. 2021](https://doi.org/10.1016/j.gie.2021.06.021) | Localization | LSTM-SSD | N/A | No | - | - | - 
 [Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) | Localization | YOLOv3 | MXNet | PASCAL VOC 2007 and 2012 | All | - | FCL
 
@@ -256,43 +259,44 @@ Study | Task | Based on | Highlights
 
 ## Data Augmentation Strategies
 
-&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Crop | Translation (Shifting) | Random brightness | Zooming | Scale | Gaussian smoothing | Saturation adjustment | Gaussian distortion | Blurring | Resize | Random contrast | Exposure adjustment |Color augmentations in HSV | Histogram equalization | Skew | Random erasing | Color distribution adjust | Clipping | Sharpening | Mosaic | Cutmix | Mix-up | Color jittering|Random image expansion
+&nbsp; | Rotation | Flipping (Mirroring) | Shearing | Crop | Random brightness | Translation (Shifting) | Zooming | Scale | Gaussian smoothing | Saturation adjustment | Gaussian distortion | Blurring | Resize | Random contrast | Exposure adjustment |Color augmentations in HSV | Histogram equalization | Skew | Random erasing | Color distribution adjust | Clipping | Sharpening | Mosaic | Cutmix | Mix-up | Color jittering|Random image expansion
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:| :---:| :---: | :---: | :---: | :---: | :---: | :---: 
-Num. Studies |27|23|10|9|8|8|6|6|4|3|3|3|3|3|2|2|1|1|1|1|1|1|1|1|1|1|1
-[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X | X |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  | |  | |  |  |  |  |  |  |  
+Num. Studies |27|24|10|9|9|8|6|6|4|3|3|3|3|3|2|2|1|1|1|1|1|1|1|1|1|1|1
+[Tajbakhsh et al. 2015](https://doi.org/10.1109/ISBI.2015.7163821) | X |  |  | X |  | X |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Park and Sargent 2016](https://doi.org/10.1117/12.2217148) | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  | |  | |  |  |  |  |  |  |  
 [Ribeiro et al. 2016](http://dx.doi.org/10.1155/2016/6584725) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Yu et al. 2017](https://doi.org/10.1109/JBHI.2016.2637004) | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Byrne et al. 2017](https://doi.org/10.1136/gutjnl-2017-314547) |  | X |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Brandao et al. 2018](https://doi.org/10.1142/S2424905X18400020) |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  |  | X |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Zhang R. et al. 2018](https://doi.org/10.1016/j.patcog.2018.05.026) | X | X |  |  | X |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Zheng Y. et al. 2018](https://doi.org/10.1109/EMBC.2018.8513337) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  |  | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Shin Y. et al. 2018](https://doi.org/10.1109/ACCESS.2018.2856402) | X | X | X |  | X |  | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Urban et al. 2018](https://doi.org/10.1053/j.gastro.2018.06.037) | X | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  |  | X |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Mohammed et al. 2018](http://bmvc2018.org/contents/papers/0487.pdf)  | X | X | X |  | X |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Qadir et al. 2019](https://doi.org/10.1109/JBHI.2019.2907434) | X | X | X |  |  |  | X |  |  |  |  |  |  |  |  |  |  | |  |  |  |  |  |  |  |  |  
-[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521) | X | X | X |  | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Tian Y. et al. 2019](https://doi.org/10.1109/ISBI.2019.8759521) | X | X | X |  |  | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Blanes-Vidal et al. 2019](https://doi.org/10.1080/0284186X.2019.1584404) | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Zhang X. et al. 2019](https://doi.org/10.1371/journal.pone.0214133) | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Zhu X. et al. 2019](https://doi.org/10.1016/j.gie.2019.03.1087) | X |  |  |  |  |  |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  
 [Sornapudi et al. 2019](https://doi.org/10.3390/app9122404) | X | X | X |  |  |  |  | X | X |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  
 [Wittenberg et al. 2019](https://doi.org/10.1515/cdbme-2019-0059) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | X | X |  |  | X |  |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  
-[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  |  | X | X |  |  | X | X |  |  |  |  |  |  | X | X |  |  |  |  |  |  |  |  
-[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X |  | X | | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Yuan Y. et al. 2019](https://doi.org/10.1109/TASE.2019.2936645) | X | X |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  
+[Ma Y. et al. 2019](https://doi.org/10.1109/ISNE.2019.8896576) | X |  |  | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Bour et al. 2019](https://doi.org/10.1109/ISSPIT47144.2019.9001816) | X | X | X |  | X |  | X |  |  | X | X |  |  |  |  |  |  | X | X |  |  |  |  |  |  |  |  
+[Patino-Barrientos et al. 2020](https://doi.org/10.3390/app10020501) | X | X | X |  | | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Cheng Tao Pu et al. 2020](https://doi.org/10.1016/j.gie.2020.02.042) | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Ma Y. et al. 2020](https://doi.org/10.1109/ISBI45749.2020.9098663) | X |  | X |  |  |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  
-[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) |  |  |  |  |  | X |  |  |  |  |  | X |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  
-[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) |  | X |  |  |  |   |  |  |  |  |  |   |  |   |  |  |  |  |  |  |  |   |  |  |  |  |  
-[Wang W. et al. 2020](http://doi.org/10.1186/s12880-020-00482-3) | X |  |  |  |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  
-[Li T. et al. 2020](https://doi.org/10.1055/a-1229-3927) | X |  |  | X | X |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |   |  |  |  |  |  
+[Young Lee J. et al. 2020](https://doi.org/10.1038/s41598-020-65387-1) |  |  |  |  | X |  |  |  |  |  |  | X |  | X |  |  |  |  |  |  |  | X |  |  |  |  |  
+[Young Joo Yang et al. 2020](https://doi.org/10.3390/jcm9051593) |  | X |  |  |   |  |  |  |  |  |  |   |  |   |  |  |  |  |  |  |  |   |  |  |  |  |  
+[Wang W. et al. 2020](http://doi.org/10.1186/s12880-020-00482-3) | X |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Li T. et al. 2020](https://doi.org/10.1055/a-1229-3927) | X |  |  | X |  | X |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |   |  |  |  |  |  
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | X | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |   |  |  |  |  |  
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | X | X |  |  |  |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503)  |  | X |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | X |
+[Misawa et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060) |  | X |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  | X |  |  |  |  |  
 [Livovsky et al. 2021](https://doi.org/10.1016/j.gie.2021.06.021) |  | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | X | X | X | X | X | X |  | X |  | X |  | X |  |  | X | X |  |  |  |  |  | X | X | X |  |  |  
-[Liu et al. 2021](https://doi.org/10.1016/j.media.2021.102052) | X | X | X |  |  | X | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
+[Liu et al. 2021](https://doi.org/10.1016/j.media.2021.102052) | X | X | X |  | X |  | X |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  
 [Nogueira-Rodríguez et al. 2021](https://doi.org/10.1007/s00521-021-06496-4) |  | X |  | X |  |  |  |  |  |  |  |  | X |  |  |  |  |  |  |  |  |  |  |  |  |  | X 
 
 ## Frameworks and Libraries
@@ -361,6 +365,7 @@ Study | Recall (sensitivity) | Precision (PPV) | Specificity | Others | Manually
 [Podlasek J. et al. 2020](https://doi.org/10.1055/a-1388-6735) | 91.2% (f) <sub>\{P\} [CVC-ClinicDB]</sub> <br/><br/> 88.2% (f) <sub>\{P\} [Hyper-Kvasir]</sub> <br/><br/> 74.1% (f) <sub>\{P\} [CVC-ColonDB]</sub> <br/><br/> 67.3% (f) <sub>\{P\} [ETIS-Larib]</sub> | 97.4% (f) <sub>\{P\} [CVC-ClinicDB]</sub> <br/><br/> 97.5% (f) <sub>\{P\} [Hyper-Kvasir]</sub> <br/><br/> 92.4% (f) <sub>\{P\} [CVC-ColonDB]</sub> <br/><br/> 79% (f) <sub>\{P\} [ETIS-Larib]</sub> | N/A | F1: 0.942, F2: 0.924 (f) <sub>\{P\} [CVC-ClinicDB]</sub> <br/><br/> F1: 0.926, F2: 0.899 (f) <sub>\{P\} [Hyper-Kvasir]</sub> <br/><br/> F1: 0.823, F2: 0.771 (f) <sub>\{P\} [CVC-ColonDB]</sub> <br/><br/> F1: 0.727, F2: 0.693 (f) <sub>\{P\} [ETIS-Larib]</sub> | Yes
 [Qadir et al. 2021](https://doi.org/10.1016/j.media.2020.101897) | 86.54% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> 91% (f) <sub>\{CVC-ClinicDB\} [CVC-ColonDB]</sub> | 86.12% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> 88.35% (f) <sub>\{CVC-ClinicDB\} [CVC-ColonDB]</sub> | N/A | F1: 0.863, F2: 0.864 (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> F1: 0.896, F2: 0.904 (f) <sub>\{CVC-ClinicDB\} [CVC-ColonDB]</sub> | Yes
 [Xu J. et al. 2021](https://doi.org/10.1016/j.bspc.2021.102503) | 75.70% (f) <sub>\{CVC-ClinicDB + CVC-ColonDB + ETIS-Larib + CVC-ClinicVideoDB\} [P]</sub> <br/><br/> 71.63% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> 66.36% (f) <sub>\{CVC-ClinicDB\} [CVC-ClinicVideoDB]</sub> | 85.54% (f) <sub>\{CVC-ClinicDB + CVC-ColonDB + ETIS-Larib + CVC-ClinicVideoDB\} [P]</sub> <br/><br/> 83.24% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> 88.5% (f) <sub>\{CVC-ClinicDB\} [CVC-ClinicVideoDB]</sub> | N/A | F1: 0.799, F2: 0.773 (f) <sub>\{CVC-ClinicDB + CVC-ColonDB + ETIS-Larib + CVC-ClinicVideoDB\} [P]</sub> <br/><br/> F1: 0.77, F2: 0.737 (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> F1: 0.7586, F2: 0.698 (f) <sub>\{CVC-ClinicDB\} [CVC-ClinicVideoDB]</sub> | Yes (ETIS-Larib, Private)<br/><br/>No (CVC-ClinicVideoDB)
+[Misawa et al. 2021](https://doi.org/10.1016/j.gie.2020.07.060) | 98% (p) <sub>\{P\} [SUN]</sub> <br/><br/> 90.5% (f) <sub>\{P\} [SUN]</sub> | 88.2% (f) <sub>\{P\} [SUN]</sub> | 93.7% (f) <sub>\{P\} [SUN]</sub> | F1: 0.893, F2: 0.900, NPV: 94.96% (f) <sub>\{P\} [SUN]</sub> | No.
 [Livovsky et al. 2021](https://doi.org/10.1016/j.gie.2021.06.021) | 97.1% (p) <sub>\{P1\} [P2]</sub> | N/A | N/A | N/A | No.
 [Pacal et al. 2021](https://doi.org//10.1016/j.compbiomed.2021.104519) | 82.55% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> 96.68% (f) <sub>\{CVC-ClinicDB\} [CVC-ColonDB]</sub> | 91.62% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> 96.04% (f) <sub>\{CVC-ClinicDB\} [CVC-ColonDB]</sub> | N/A | F1: 0.868, F2: 0.842 (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> <br/><br/> F1: 0.964, F2: 0.965 (f) <sub>\{CVC-ClinicDB\} [CVC-ColonDB]</sub> | Yes
 [Liu et al. 2021](https://doi.org/10.1016/j.media.2021.102052) | 87.5% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> | 77.8% (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> | - | F1: 0.824, F2: 0.854 (f) <sub>\{CVC-ClinicDB\} [ETIS-Larib]</sub> | Yes (ETIS-Larib)
