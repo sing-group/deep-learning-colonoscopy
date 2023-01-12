@@ -456,6 +456,7 @@ Study | Classes | AP | mAP | Recall (sensitivity) | Specificity | PPV | NPV | Ot
 - Munish Ashat, Jagpal Singh Klair, Dhruv Singh, Arvind Rangarajan Murali, Rajesh Krishnamoorthi. [Impact of real-time use of artificial intelligence in improving adenoma detection during colonoscopy: A systematic review and meta-analysis](https://doi.org/10.1055/a-1341-0457). Endoscopy International Open. 2021 March; 09(04): E513-E521.
 - Alexander Hann, Joel Troya, and Daniel Fitting. [Current status and limitations of artificial intelligence in colonoscopy](https://doi.org/10.1002/ueg2.12108). United European Gastroenterology. 2021 Jun; 1-7.
 - Michelle Viscaino, Javier Torres Bustos, Pablo Muñoz, Cecilia Auat Cheein, and Fernando Auat Cheein. [Artificial intelligence for the early detection of colorectal cancer: comprehensive review of its advantages and misconceptions](https://doi.org/10.3748/wjg.v27.i38.6399). World Journal of Gastroenterology. 2021 Oct; 27(38): 6399-6414.
+- Britt B S L Houwen, Karlijn J Nass , Jasper L A Vleugels, Paul Fockens, Yark Hazewinkel, Evelien Dekker. [Comprehensive review of publicly available colonoscopic imaging databases for artificial intelligence research: availability, accessibility, and usability](https://doi.org/10.1016/j.gie.2022.08.043). Gastrointestinal Endoscopy. 2022 Sep.
 
 ## Randomized Clinical Trials
 
