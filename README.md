@@ -3,6 +3,14 @@
 >
 > Please, cite it if you find it useful for your research.
 
+## AI4PolypNet
+
+[![AI4PolypNet](assets/AI4PolypNet.jpg)](https://pages.cvc.uab.es/ai4polypnet)
+
+As part of [AI4PolypNet](https://pages.cvc.uab.es/ai4polypnet), we are involved in a challenge that will be developed at iSMIT (September 2024). In this edition we will focus only on colonoscopy images and, apart from classical polyp detection and segmentation we present an extended version of polyp classification, including the challenging serrated sessile adenoma class. All the information is available [here](https://pages.cvc.uab.es/ai4polypnet/?page_id=208).
+
+## About this repository
+
 This repository collects the most relevant studies applying Deep Learning for Polyp Detection and Classification in Colonoscopy from a technical point of view, focusing on the low-level details for the implementation of the DL models. In first place, each study is categorized in three types: (i) polyp detection and localization (through bounding boxes or binary masks, i.e. segmentation), (ii) polyp classification, and (iii) simultaneous polyp detection and classification (i.e. studies based on the usage of a single model such as YOLO or SSD to performs simultaneous polyp detection and classification). Secondly, a summary of the public datasets available as well as the private datasets used in the studies is provided. The third section focuses on technical aspects such as the Deep Learning architectures, the data augmentation techniques and the libraries and frameworks used. Finally, the fourth section summarizes the performance metrics reported by each study.
 
 Suggestions are welcome, please check the [contribution guidelines](CONTRIBUTING.md) before submitting a pull request.
